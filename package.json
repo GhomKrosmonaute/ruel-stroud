@@ -1,8 +1,8 @@
 {
-  "name": "budget",
+  "name": "ruel-stroud",
   "version": "v8.0.0-Capi",
   "author": "ghom",
-  "description": "A Discord bot in TypeScript made with [bot.ts](https://ghom.gitbook.io/bot-ts/)",
+  "description": "Bot Discord de gestion budgétaire créé avec [bot.ts](https://ghom.gitbook.io/bot-ts/)",
   "main": "dist/index.js",
   "type": "module",
   "style": "options",

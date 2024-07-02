@@ -1,6 +1,6 @@
 ![Bot avatar](https://cdn.discordapp.com/avatars/1257663003650686986/3b2fea5ac35a7567be509fa7ef02b585.webp?size=128&fit=cover&mask=circle)
 
-# budget
+# ruel-stroud
 
 > Made with [bot.ts](https://ghom.gitbook.io/bot-ts/) by **ghom**  
 > CLI version: `>=8.0.2`  
@@ -9,12 +9,12 @@
 
 ## Description
 
-A Discord bot in TypeScript made with [bot.ts](https://ghom.gitbook.io/bot-ts/)
+Bot Discord de gestion budgétaire créé avec [bot.ts](https://ghom.gitbook.io/bot-ts/)
 
 ## Specifications
 
 You can find the documentation of bot.ts [here](https://ghom.gitbook.io/bot-ts/).  
-Below you will find the specifications for **budget**.  
+Below you will find the specifications for **ruel-stroud**.  
 
 ## Configuration file
 
@@ -93,7 +93,7 @@ export default config
 ## Database
 
 Using **sqlite3@latest** as database.  
-Below you will find a list of all the tables used by **budget**.
+Below you will find a list of all the tables used by **ruel-stroud**.
 
 > No tables have been created yet.
 
