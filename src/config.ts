@@ -8,21 +8,7 @@ const config: Config = {
   },
   client: {
     intents: [
-      "Guilds",
-      "GuildMembers",
-      "GuildModeration",
-      "GuildEmojisAndStickers",
-      "GuildIntegrations",
-      "GuildWebhooks",
-      "GuildInvites",
-      "GuildVoiceStates",
-      "GuildPresences",
       "GuildMessages",
-      "GuildMessageReactions",
-      "GuildMessageTyping",
-      "DirectMessages",
-      "DirectMessageReactions",
-      "DirectMessageTyping",
       "MessageContent",
     ],
     makeCache: Options.cacheWithLimits({
