@@ -7,10 +7,7 @@ const config: Config = {
     return import("#env").then(({ default: env }) => env.BOT_PREFIX)
   },
   client: {
-    intents: [
-      "GuildMessages",
-      "MessageContent",
-    ],
+    intents: ["Guilds", "GuildMessages", "MessageContent"],
     makeCache: Options.cacheWithLimits({
       ...Options.DefaultMakeCacheSettings,
 
@@ -21,10 +18,10 @@ const config: Config = {
       ...Options.DefaultSweeperSettings,
       messages: {
         // every day
-        interval: 1000 * 60 * 60 * 24,
+        interval: 60 * 60 * 24,
 
         // 3 days
-        lifetime: 1000 * 60 * 60 * 24 * 3,
+        lifetime: 60 * 60 * 24 * 3,
       },
     },
   },
