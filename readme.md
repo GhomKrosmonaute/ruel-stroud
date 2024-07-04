@@ -69,7 +69,7 @@ export default config.options
 
 ### Textual commands
 
-- `banking` - The banking command  
+- `banking` - Use the banking API  
 - `database` - Run SQL query on database  
 - `eval` - JS code evaluator  
 - `help` - Help menu  
@@ -81,7 +81,7 @@ export default config.options
 
 ### Banking  
 
-- `ready` - A ready listener for banking  
+- `ready` - Read the banking session data from the database  
 ### Command  
 
 - `messageCreate` - Handle messages for commands  

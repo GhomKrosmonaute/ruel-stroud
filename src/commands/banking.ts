@@ -2,7 +2,7 @@ import * as app from "#app"
 
 export default new app.Command({
   name: "banking",
-  description: "The banking command",
+  description: "Use the banking API",
   channelType: "all",
   botOwnerOnly: true,
   async run(message) {

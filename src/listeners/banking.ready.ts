@@ -4,7 +4,7 @@ import bankingTable from "#tables/banking.ts"
 
 const listener: app.Listener<"ready"> = {
   event: "ready",
-  description: "A ready listener for banking",
+  description: "Read the banking session data from the database",
   async run() {
     const banking = await bankingTable.query.first()
 
