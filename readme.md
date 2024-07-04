@@ -3,7 +3,7 @@
 # ruel-stroud
 
 > Made with [bot.ts](https://ghom.gitbook.io/bot-ts/) by **ghom**  
-> CLI version: `>=8.0.2`  
+> CLI version: `>=8.0.3`  
 > Bot.ts version: `v8.0.0-Capi`  
 > Licence: `ISC`
 
@@ -19,19 +19,24 @@ Below you will find the specifications for **ruel-stroud**.
 ## Configuration file
 
 ```ts
-import type { Config } from "#app"
+import { Config } from "#src/app/config.ts"
 import { Options } from "discord.js"
+import { z } from "zod"
 
-const config: Config = {
+export const config = new Config({
   ignoreBots: true,
-  async getPrefix() {
-    return import("#env").then(({ default: env }) => env.BOT_PREFIX)
+  envSchema: z.object({
+    BANKING_SECRET_ID: z.string(),
+    BANKING_SECRET_KEY: z.string(),
+    BANKING_ACCOUNT_ID: z.string(),
+    BANKING_INSTITUTION_ID: z.string(),
+    BANKING_REFERENCE: z.string(),
+  }),
+  async getPrefix(): Promise<string> {
+    return import("#app").then(({ env }) => env.BOT_PREFIX)
   },
   client: {
-    intents: [
-      "GuildMessages",
-      "MessageContent",
-    ],
+    intents: ["Guilds", "GuildMessages", "MessageContent"],
     makeCache: Options.cacheWithLimits({
       ...Options.DefaultMakeCacheSettings,
 
@@ -42,16 +47,16 @@ const config: Config = {
       ...Options.DefaultSweeperSettings,
       messages: {
         // every day
-        interval: 1000 * 60 * 60 * 24,
+        interval: 60 * 60 * 24,
 
         // 3 days
-        lifetime: 1000 * 60 * 60 * 24 * 3,
+        lifetime: 60 * 60 * 24 * 3,
       },
     },
   },
-}
+})
 
-export default config
+export default config.options
 
 ```
 
@@ -64,6 +69,7 @@ export default config
 
 ### Textual commands
 
+- `banking` - The banking command  
 - `database` - Run SQL query on database  
 - `eval` - JS code evaluator  
 - `help` - Help menu  
@@ -73,6 +79,9 @@ export default config
 
 ## Listeners
 
+### Banking  
+
+- `ready` - A ready listener for banking  
 ### Command  
 
 - `messageCreate` - Handle messages for commands  
@@ -95,7 +104,7 @@ export default config
 Using **sqlite3@latest** as database.  
 Below you will find a list of all the tables used by **ruel-stroud**.
 
-> No tables have been created yet.
+- banking
 
 ## Information
 
@@ -103,4 +112,4 @@ This readme.md is dynamic, it will update itself with the latest information.
 If you see a mistake, please report it and an update will be made as soon as possible.
 
 - Used by: **1** Discord guild
-- Last update date: **7/2/2024**
+- Last update date: **7/4/2024**
