@@ -1,10 +1,18 @@
-import type { Config } from "#app"
+import { Config } from "#src/app/config.ts"
 import { Options } from "discord.js"
+import { z } from "zod"
 
-const config: Config = {
+export const config = new Config({
   ignoreBots: true,
-  async getPrefix() {
-    return import("#env").then(({ default: env }) => env.BOT_PREFIX)
+  envSchema: z.object({
+    BANKING_SECRET_ID: z.string(),
+    BANKING_SECRET_KEY: z.string(),
+    BANKING_ACCOUNT_ID: z.string(),
+    BANKING_INSTITUTION_ID: z.string(),
+    BANKING_REFERENCE: z.string(),
+  }),
+  async getPrefix(): Promise<string> {
+    return import("#app").then(({ env }) => env.BOT_PREFIX)
   },
   client: {
     intents: ["Guilds", "GuildMessages", "MessageContent"],
@@ -25,6 +33,6 @@ const config: Config = {
       },
     },
   },
-}
+})
 
-export default config
+export default config.options

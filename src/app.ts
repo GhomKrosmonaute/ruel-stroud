@@ -1,3 +1,5 @@
 export * from "discord.js"
 export * from "./app.native.ts"
+export * from "./namespaces/banking.ts"
 export * as discord from "discord.js"
+export * as banking from "./namespaces/banking.ts"
