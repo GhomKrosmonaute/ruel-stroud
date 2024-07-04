@@ -32,9 +32,6 @@ export const config = new Config({
     BANKING_INSTITUTION_ID: z.string(),
     BANKING_REFERENCE: z.string().regex(/^\d+$/).max(7),
   }),
-  async getPrefix(): Promise<string> {
-    return import("#app").then(({ env }) => env.BOT_PREFIX)
-  },
   client: {
     intents: ["Guilds", "GuildMessages", "MessageContent"],
     makeCache: Options.cacheWithLimits({
