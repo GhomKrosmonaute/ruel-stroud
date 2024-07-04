@@ -2,6 +2,7 @@ import * as app from "#app"
 
 export default new app.Command({
   name: "banking",
+  aliases: ["bank", "money", "bk", "$"],
   description: "Use the banking API",
   channelType: "all",
   botOwnerOnly: true,
@@ -31,21 +32,65 @@ export default new app.Command({
       channelType: "all",
       botOwnerOnly: true,
       async run(message) {
-        const { transactions } = await app.banking.fetchTransactions()
+        const { transactions } = await app.fetchTransactions()
 
         new app.StaticPaginator({
           channel: message.channel,
-          pages: await app.divider(transactions.booked, 10, (items) => {
-            return app.getSystemMessage("default", {
-              description: items
-                .map(
-                  (transaction) =>
-                    `${transaction.debtorName} - ${transaction.transactionAmount.amount}${transaction.transactionAmount.currency}`,
-                )
-                .join("\n"),
-            })
+          placeHolder: await app.getSystemMessage("error", {
+            title: "Transactions passées",
+            description: "No transactions found",
           }),
+          idleTime: 600_000,
+          pages: await app.divider(
+            transactions.booked,
+            10,
+            (page, index, pages) => {
+              console.log(page)
+              return app.getSystemMessage("default", {
+                title: "Transactions passées",
+                description: page
+                  .map(
+                    (transaction) =>
+                      `<t:${app.dayjs(transaction.bookingDate, "YYYY-MM-DD").unix()}:D> \`${
+                        transaction.transactionAmount.amount
+                      } €\` ${app.getBestRemittanceInformation(
+                        transaction.remittanceInformationUnstructuredArray,
+                      )}`,
+                  )
+                  .join("\n"),
+                footer: { text: `Page: ${index + 1} / ${pages.length}` },
+              })
+            },
+          ),
         })
+
+        // new app.StaticPaginator({
+        //   channel: message.channel,
+        //   placeHolder: await app.getSystemMessage("error", {
+        //     title: "Transactions en attente",
+        //     description: "No transactions found",
+        //   }),
+        //   pages: await app.divider(
+        //     transactions.pending,
+        //     10,
+        //     (page, index, pages) => {
+        //       return app.getSystemMessage("default", {
+        //         title: "Transactions en attente",
+        //         description: page
+        //           .map(
+        //             (transaction) =>
+        //               `<t:${app.dayjs(transaction.valueDate, "YYYY-MM-DD").unix()}:D> \`${
+        //                 transaction.transactionAmount.amount
+        //               } €\` ${app.getBestRemittanceInformation(
+        //                 transaction.remittanceInformationUnstructuredArray,
+        //               )}`,
+        //           )
+        //           .join("\n"),
+        //         footer: { text: `Page: ${index + 1} / ${pages.length}` },
+        //       })
+        //     },
+        //   ),
+        // })
       },
     }),
   ],

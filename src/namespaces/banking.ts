@@ -8,6 +8,17 @@ export const bankingCache: Banking = {
   REQUISITION_ID: "",
 }
 
+export function getBestRemittanceInformation(info: string[]) {
+  // le string avec le plus de lettre est le plus intéressant
+  return info
+    .sort(
+      (a, b) =>
+        b.split("").filter((l) => /[a-z]/i.test(l)).length -
+        a.split("").filter((l) => /[a-z]/i.test(l)).length,
+    )[0]
+    .replace(/\s+/g, " ")
+}
+
 /**
  * Reconnect to the banking API and return the confirmation link
  */
@@ -164,7 +175,8 @@ export type BankingTransaction<Booked extends boolean> = {
   }
   bookingDate: Booked extends true ? string : null
   valueDate: string
-  remittanceInformationUnstructured: string
+  remittanceInformationUnstructured?: string
+  remittanceInformationUnstructuredArray: string[]
 }
 
 export async function fetchTransactions(): Promise<{

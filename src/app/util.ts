@@ -479,11 +479,13 @@ export interface SystemMessageOptions {
   timestamp: number | Date
   fields: discord.EmbedField[]
   allowedMentions: discord.MessageCreateOptions["allowedMentions"]
+  components: discord.MessageCreateOptions["components"]
+  content: string
 }
 
 export type SystemMessage = Pick<
   discord.MessageCreateOptions,
-  "embeds" | "content" | "files" | "allowedMentions"
+  "embeds" | "content" | "files" | "allowedMentions" | "components"
 >
 
 export interface SystemMessages {
@@ -505,8 +507,12 @@ const defaultSystemMessages: SystemMessages = {
     author,
     footer,
     timestamp,
+    components,
+    content,
   }) => ({
     allowedMentions,
+    components,
+    content,
     embeds: [
       new discord.EmbedBuilder()
         .setTitle(title ?? null)
@@ -526,8 +532,12 @@ const defaultSystemMessages: SystemMessages = {
     author,
     footer,
     timestamp,
+    components,
+    content,
   }) => ({
     allowedMentions,
+    components,
+    content,
     embeds: [
       new discord.EmbedBuilder()
         .setTitle(title ?? null)
@@ -554,6 +564,8 @@ const defaultSystemMessages: SystemMessages = {
     footer,
     timestamp,
     error,
+    components,
+    content,
   }) => {
     const formattedError = error
       ? await code.stringify({
@@ -572,6 +584,8 @@ const defaultSystemMessages: SystemMessages = {
 
     return {
       allowedMentions,
+      components,
+      content,
       embeds: [
         new discord.EmbedBuilder()
           .setTitle(title ?? null)
