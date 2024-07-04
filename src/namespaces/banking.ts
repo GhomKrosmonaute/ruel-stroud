@@ -8,6 +8,8 @@ export const bankingCache: Banking = {
   REQUISITION_ID: "",
 }
 
+/* Endpoints: https://developer.gocardless.com/bank-account-data/endpoints */
+
 export function getBestRemittanceInformation(info: string[]) {
   // le string avec le plus de lettre est le plus intéressant
   return info
