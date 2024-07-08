@@ -163,28 +163,86 @@ async function createBankingRequisition(): Promise<{
   })
 }
 
-export type BankingTransaction<Booked extends boolean> = {
-  transactionId: Booked extends true ? string : null
-  debtorName: Booked extends true ? string : null
-  debtorAccount: Booked extends true
-    ? {
-        iban: string
-      }
-    : null
-  transactionAmount: {
-    currency: "EUR"
-    amount: string
-  }
-  bookingDate: Booked extends true ? string : null
-  valueDate: string
+interface Transaction {
+  additionalDataStructured?: object
+  additionalInformation?: string
+  additionalInformationStructured?: string
+  balanceAfterTransaction?: Balance
+  bankTransactionCode?: string
+  bookingDate?: string // ISODate
+  bookingDateTime?: string // ISODate
+  checkId?: string
+  creditorAccount?: AccountReference
+  creditorAgent?: string // BICFI
+  creditorId?: string
+  creditorName?: string
+  currencyExchange?: ReportExchangeRate[]
+  debtorAccount?: AccountReference
+  debtorAgent?: string // BICFI
+  debtorName?: string
+  endToEndId?: string
+  entryReference?: string
+  internalTransactionId?: string
+  mandateId?: string
+  merchantCategoryCode?: string
+  proprietaryBankTransactionCode?: string
+  purposeCode?: PurposeCode
+  remittanceInformationStructured?: string
+  remittanceInformationStructuredArray?: Remittance[]
   remittanceInformationUnstructured?: string
-  remittanceInformationUnstructuredArray: string[]
+  remittanceInformationUnstructuredArray?: string[]
+  transactionAmount: {
+    amount: number
+    currency: string // Max3Text
+  }
+  transactionId?: string
+  ultimateCreditor?: string
+  ultimateDebtor?: string
+  valueDate?: string // ISODate
+  valueDateTime?: string // ISODate
+}
+
+interface Balance {
+  amount: number
+  currency: string
+}
+
+interface AccountReference {
+  iban?: string
+  bban?: string
+  pan?: string
+  maskedPan?: string
+  msisdn?: string
+}
+
+interface ReportExchangeRate {
+  unitCurrency: string
+  exchangeRate: number
+  rateType: string
+  contractIdentification?: string
+  quotationDate?: string
+  instructedAmount?: {
+    amount: number
+    currency: string
+  }
+  counterAmount?: {
+    amount: number
+    currency: string
+  }
+}
+
+interface PurposeCode {
+  code: string
+}
+
+interface Remittance {
+  reference: string
 }
 
 export async function fetchTransactions(): Promise<{
   transactions: {
-    booked: BankingTransaction<true>[]
-    pending: BankingTransaction<false>[]
+    booked: Transaction[]
+    pending: Transaction[]
   }
 }> {
   // curl -X GET "https://bankaccountdata.gocardless.com/api/v2/accounts/065da497-e6af-4950-88ed-2edbc0577d20/transactions/" \

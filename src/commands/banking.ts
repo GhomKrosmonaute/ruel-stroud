@@ -53,9 +53,15 @@ export default new app.Command({
                     (transaction) =>
                       `<t:${app.dayjs(transaction.bookingDate, "YYYY-MM-DD").unix()}:D> \`${
                         transaction.transactionAmount.amount
-                      } €\` ${app.getBestRemittanceInformation(
-                        transaction.remittanceInformationUnstructuredArray,
-                      )}`,
+                      } €\` ${
+                        transaction.remittanceInformationUnstructuredArray
+                          ? app.getBestRemittanceInformation(
+                              transaction.remittanceInformationUnstructuredArray,
+                            )
+                          : transaction.remittanceInformationStructured ??
+                            transaction.remittanceInformationUnstructured ??
+                            "unknown"
+                      }`,
                   )
                   .join("\n"),
                 footer: { text: `Page: ${index + 1} / ${pages.length}` },
