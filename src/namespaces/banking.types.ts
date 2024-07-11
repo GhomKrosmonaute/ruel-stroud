@@ -2,7 +2,7 @@ export interface Transaction {
   additionalDataStructured?: object
   additionalInformation?: string
   additionalInformationStructured?: string
-  balanceAfterTransaction?: Balance
+  balanceAfterTransaction?: Amount
   bankTransactionCode?: string
   bookingDate?: string // ISODate
   bookingDateTime?: string // ISODate
@@ -26,20 +26,12 @@ export interface Transaction {
   remittanceInformationStructuredArray?: Remittance[]
   remittanceInformationUnstructured?: string
   remittanceInformationUnstructuredArray?: string[]
-  transactionAmount: {
-    amount: number
-    currency: string // Max3Text
-  }
+  transactionAmount: Amount
   transactionId?: string
   ultimateCreditor?: string
   ultimateDebtor?: string
   valueDate?: string // ISODate
   valueDateTime?: string // ISODate
-}
-
-export interface Balance {
-  amount: number
-  currency: string
 }
 
 export interface AccountReference {
@@ -56,14 +48,8 @@ export interface ReportExchangeRate {
   rateType: string
   contractIdentification?: string
   quotationDate?: string
-  instructedAmount?: {
-    amount: number
-    currency: string
-  }
-  counterAmount?: {
-    amount: number
-    currency: string
-  }
+  instructedAmount?: Amount
+  counterAmount?: Amount
 }
 
 export interface PurposeCode {
@@ -75,7 +61,7 @@ export interface Remittance {
 }
 
 export interface Amount {
-  amount: number
+  amount: string
   currency: string
 }
 

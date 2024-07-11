@@ -1,13 +1,24 @@
 /* Endpoints: https://developer.gocardless.com/bank-account-data/endpoints */
 
 import chalk from "chalk"
+import cron from "node-cron"
+import querystring from "node:querystring"
 
 import env from "#env"
+import client from "#client"
 import { Logger } from "#logger"
 
 import bankingTable, { Banking } from "#tables/banking.ts"
+import type { Middleware } from "#src/app/command.ts"
+import { getSystemMessage } from "#src/app/util.ts"
 
 import * as types from "./banking.types.ts"
+
+const currencies: Record<string, string> = {
+  EUR: "€",
+  USD: "$",
+  GBP: "£",
+}
 
 export const bankingLogger = new Logger({ section: "banking" })
 
@@ -15,6 +26,51 @@ export const bankingCache: Banking = {
   ACCESS: "",
   AGREEMENT_ID: "",
   REQUISITION_ID: "",
+}
+
+export const bankingMiddleware: Middleware<"all"> = async (message, data) => {
+  return {
+    data,
+    result:
+      message.channel.isDMBased() ||
+      message.channelId === env.BOT_CHANNEL ||
+      "This command is not available in this channel",
+  }
+}
+
+export interface FormatPriceOptions {
+  padStart?: number
+  padEnd?: number
+}
+
+export function formatPrice(
+  amount: types.Amount | string | number,
+  options?: FormatPriceOptions,
+) {
+  let price: string
+
+  switch (typeof amount) {
+    case "string":
+      price = amount
+      break
+    case "number":
+      price = amount.toFixed(2)
+      break
+    default:
+      price = amount.amount
+  }
+
+  price += typeof amount === "object" ? ` ${currencies[amount.currency]}` : " €"
+
+  if (options?.padStart) {
+    price = price.padStart(options.padStart)
+  }
+
+  if (options?.padEnd) {
+    price = price.padEnd(options.padEnd)
+  }
+
+  return `\`${price}\``
 }
 
 function errorHandler(action: string) {
@@ -27,6 +83,45 @@ function errorHandler(action: string) {
     }
     return response
   }
+}
+
+export async function bankingNeedsToBeReconnected() {
+  const link = await reconnectBanking()
+
+  bankingLogger.warn(`needs to be reconnected via ${link}`)
+
+  const channel = client.channels.cache.get(env.BOT_CHANNEL)
+
+  if (channel?.isTextBased()) {
+    channel.send(
+      await getSystemMessage("error", {
+        content: `<@${env.BOT_OWNER}>`,
+        title: "Banking reconnection needed",
+        description: `You need to [reconnect](${link}) to the banking API.`,
+        url: link,
+      }),
+    )
+  } else {
+    bankingLogger.error(
+      `${chalk.blueBright("bankingNeedsToBeReconnected")} no channel found to send reconnection message`,
+    )
+
+    throw 1
+  }
+}
+
+export function launchBankingCron() {
+  // every 3 hours
+  cron.schedule("0 */3 * * *", async () => {
+    try {
+      // todo: fetch last transactions and push new one to the database
+      // const transactions = await fetchTransactions()
+
+      bankingLogger.success("transactions successfully updated")
+    } catch (error) {
+      bankingLogger.error("transactions failed to update")
+    }
+  })
 }
 
 export function getBestRemittanceInformation(info: string[]) {
@@ -169,7 +264,14 @@ async function createBankingRequisition(): Promise<{
     .then((response) => response.json() as any)
 }
 
-export async function fetchTransactions(): Promise<{
+export interface FetchTransactionsOptions {
+  from?: Date
+  to?: Date
+}
+
+export async function fetchTransactions(
+  options?: FetchTransactionsOptions,
+): Promise<{
   transactions: {
     booked: types.Transaction[]
     pending: types.Transaction[]
@@ -180,7 +282,14 @@ export async function fetchTransactions(): Promise<{
   //   -H  "Authorization: Bearer ACCESS_TOKEN"
 
   return fetch(
-    `https://bankaccountdata.gocardless.com/api/v2/accounts/${env.BANKING_ACCOUNT_ID}/transactions/`,
+    `https://bankaccountdata.gocardless.com/api/v2/accounts/${env.BANKING_ACCOUNT_ID}/transactions?${
+      options
+        ? querystring.stringify({
+            from: options.from?.toISOString(),
+            to: options.to?.toISOString(),
+          })
+        : ""
+    }`,
     {
       headers: {
         accept: "application/json",
@@ -192,9 +301,9 @@ export async function fetchTransactions(): Promise<{
     .then((response) => response.json() as any)
 }
 
-export async function fetchBalances(): Promise<{
-  balances: types.AccountBalance[]
-}> {
+export async function fetchBalance(): Promise<
+  types.AccountBalance | undefined
+> {
   // curl -X GET "https://bankaccountdata.gocardless.com/api/v2/accounts/065da497-e6af-4950-88ed-2edbc0577d20/balances/" \
   //   -H  "accept: application/json" \
   //   -H  "Authorization: Bearer ACCESS_TOKEN"
@@ -209,5 +318,11 @@ export async function fetchBalances(): Promise<{
     },
   )
     .then(errorHandler("fetchBalances"))
-    .then((response) => response.json() as any)
+    .then(
+      (response) =>
+        response.json() as unknown as { balances: types.AccountBalance[] },
+    )
+    .then(({ balances }) =>
+      balances.find((balance) => balance.balanceType === "information"),
+    )
 }

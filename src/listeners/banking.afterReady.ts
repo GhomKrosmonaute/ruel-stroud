@@ -2,6 +2,7 @@ import * as app from "#app"
 
 import bankingTable from "#tables/banking.ts"
 import chalk from "chalk"
+import { bankingLogger } from "#app"
 
 const listener: app.Listener<"afterReady"> = {
   event: "afterReady",
@@ -18,21 +19,23 @@ const listener: app.Listener<"afterReady"> = {
       try {
         await app.fetchTransactions()
 
-        return app.bankingLogger.success("session data successfully loaded")
+        app.bankingLogger.success("session data successfully loaded")
+
+        return app.launchBankingCron()
       } catch (error) {}
     }
 
     try {
-      const link = await app.reconnectBanking()
+      await app.bankingNeedsToBeReconnected()
 
-      app.bankingLogger.warn(`needs to be reconnected via ${link}`)
-    } catch (error) {}
+      app.launchBankingCron()
+    } catch (error) {
+      bankingLogger.error(
+        `${chalk.yellow("once")} ${chalk.blueBright("afterReady")} no session data found and failed to reconnect`,
+      )
 
-    app.bankingLogger.error(
-      `${chalk.yellow("once")} ${chalk.blueBright("afterReady")} no session data found and failed to reconnect`,
-    )
-
-    process.exit(1)
+      process.exit(1)
+    }
   },
 }
 

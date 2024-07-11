@@ -5,10 +5,12 @@ import { z } from "zod"
 export const config = new Config({
   ignoreBots: true,
   envSchema: z.object({
+    BOT_CHANNEL: z.string(),
     BANKING_SECRET_ID: z.string(),
     BANKING_SECRET_KEY: z.string(),
     BANKING_ACCOUNT_ID: z.string(),
     BANKING_INSTITUTION_ID: z.string(),
+    BANKING_AUTHORIZED_OVERDRAFT: z.coerce.number().positive(),
   }),
   client: {
     intents: ["Guilds", "GuildMessages", "MessageContent"],
