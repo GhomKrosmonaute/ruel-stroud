@@ -1,6 +1,15 @@
+/* Endpoints: https://developer.gocardless.com/bank-account-data/endpoints */
+
+import chalk from "chalk"
+
 import env from "#env"
+import { Logger } from "#logger"
 
 import bankingTable, { Banking } from "#tables/banking.ts"
+
+import * as types from "./banking.types.ts"
+
+export const bankingLogger = new Logger({ section: "banking" })
 
 export const bankingCache: Banking = {
   ACCESS: "",
@@ -8,7 +17,17 @@ export const bankingCache: Banking = {
   REQUISITION_ID: "",
 }
 
-/* Endpoints: https://developer.gocardless.com/bank-account-data/endpoints */
+function errorHandler(action: string) {
+  return (response: Response) => {
+    if (!response.ok) {
+      bankingLogger.error(
+        `${chalk.blueBright(action)} - ${response.status} ${response.statusText}`,
+      )
+      throw new Error("Failed to perform banking request")
+    }
+    return response
+  }
+}
 
 export function getBestRemittanceInformation(info: string[]) {
   // le string avec le plus de lettre est le plus intéressant
@@ -64,13 +83,9 @@ async function createBankingAccessToken(): Promise<{
       secret_id: env.BANKING_SECRET_ID,
       secret_key: env.BANKING_SECRET_KEY,
     }),
-  }).then((response) => {
-    if (!response.ok) {
-      console.error(response.status, response.statusText)
-      throw new Error("Failed to create banking access token")
-    }
-    return response.json() as any
   })
+    .then(errorHandler("createBankingAccessToken"))
+    .then((response) => response.json() as any)
 }
 
 async function createBankingAgreement(): Promise<{
@@ -107,13 +122,9 @@ async function createBankingAgreement(): Promise<{
         access_scope: ["balances", "details", "transactions"],
       }),
     },
-  ).then((response) => {
-    if (!response.ok) {
-      console.error(response.status, response.statusText)
-      throw new Error("Failed to create banking agreement")
-    }
-    return response.json() as any
-  })
+  )
+    .then(errorHandler("createBankingAgreement"))
+    .then((response) => response.json() as any)
 }
 
 async function createBankingRequisition(): Promise<{
@@ -150,99 +161,18 @@ async function createBankingRequisition(): Promise<{
       redirect:
         "https://discord.com/developers/applications/1257663003650686986/information",
       institution_id: env.BANKING_INSTITUTION_ID,
-      reference: env.BANKING_REFERENCE,
       agreement: bankingCache.AGREEMENT_ID,
       user_language: "FR",
     }),
-  }).then((response) => {
-    if (!response.ok) {
-      console.error(response.status, response.statusText)
-      throw new Error("Failed to create banking requisition")
-    }
-    return response.json() as any
   })
-}
-
-interface Transaction {
-  additionalDataStructured?: object
-  additionalInformation?: string
-  additionalInformationStructured?: string
-  balanceAfterTransaction?: Balance
-  bankTransactionCode?: string
-  bookingDate?: string // ISODate
-  bookingDateTime?: string // ISODate
-  checkId?: string
-  creditorAccount?: AccountReference
-  creditorAgent?: string // BICFI
-  creditorId?: string
-  creditorName?: string
-  currencyExchange?: ReportExchangeRate[]
-  debtorAccount?: AccountReference
-  debtorAgent?: string // BICFI
-  debtorName?: string
-  endToEndId?: string
-  entryReference?: string
-  internalTransactionId?: string
-  mandateId?: string
-  merchantCategoryCode?: string
-  proprietaryBankTransactionCode?: string
-  purposeCode?: PurposeCode
-  remittanceInformationStructured?: string
-  remittanceInformationStructuredArray?: Remittance[]
-  remittanceInformationUnstructured?: string
-  remittanceInformationUnstructuredArray?: string[]
-  transactionAmount: {
-    amount: number
-    currency: string // Max3Text
-  }
-  transactionId?: string
-  ultimateCreditor?: string
-  ultimateDebtor?: string
-  valueDate?: string // ISODate
-  valueDateTime?: string // ISODate
-}
-
-interface Balance {
-  amount: number
-  currency: string
-}
-
-interface AccountReference {
-  iban?: string
-  bban?: string
-  pan?: string
-  maskedPan?: string
-  msisdn?: string
-}
-
-interface ReportExchangeRate {
-  unitCurrency: string
-  exchangeRate: number
-  rateType: string
-  contractIdentification?: string
-  quotationDate?: string
-  instructedAmount?: {
-    amount: number
-    currency: string
-  }
-  counterAmount?: {
-    amount: number
-    currency: string
-  }
-}
-
-interface PurposeCode {
-  code: string
-}
-
-interface Remittance {
-  reference: string
+    .then(errorHandler("createBankingRequisition"))
+    .then((response) => response.json() as any)
 }
 
 export async function fetchTransactions(): Promise<{
   transactions: {
-    booked: Transaction[]
-    pending: Transaction[]
+    booked: types.Transaction[]
+    pending: types.Transaction[]
   }
 }> {
   // curl -X GET "https://bankaccountdata.gocardless.com/api/v2/accounts/065da497-e6af-4950-88ed-2edbc0577d20/transactions/" \
@@ -257,11 +187,27 @@ export async function fetchTransactions(): Promise<{
         Authorization: `Bearer ${bankingCache.ACCESS}`,
       },
     },
-  ).then((response) => {
-    if (!response.ok) {
-      console.error(response.status, response.statusText)
-      throw new Error("Failed to fetch banking transactions")
-    }
-    return response.json() as any
-  })
+  )
+    .then(errorHandler("fetchTransactions"))
+    .then((response) => response.json() as any)
+}
+
+export async function fetchBalances(): Promise<{
+  balances: types.AccountBalance[]
+}> {
+  // curl -X GET "https://bankaccountdata.gocardless.com/api/v2/accounts/065da497-e6af-4950-88ed-2edbc0577d20/balances/" \
+  //   -H  "accept: application/json" \
+  //   -H  "Authorization: Bearer ACCESS_TOKEN"
+
+  return fetch(
+    `https://bankaccountdata.gocardless.com/api/v2/accounts/${env.BANKING_ACCOUNT_ID}/balances/`,
+    {
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${bankingCache.ACCESS}`,
+      },
+    },
+  )
+    .then(errorHandler("fetchBalances"))
+    .then((response) => response.json() as any)
 }

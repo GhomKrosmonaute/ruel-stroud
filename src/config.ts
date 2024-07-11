@@ -9,7 +9,6 @@ export const config = new Config({
     BANKING_SECRET_KEY: z.string(),
     BANKING_ACCOUNT_ID: z.string(),
     BANKING_INSTITUTION_ID: z.string(),
-    BANKING_REFERENCE: z.string().regex(/^\d+$/).max(7),
   }),
   client: {
     intents: ["Guilds", "GuildMessages", "MessageContent"],

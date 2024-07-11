@@ -26,6 +26,27 @@ export default new app.Command({
       },
     }),
     new app.Command({
+      name: "account",
+      aliases: ["solde", "balance", "view", "status"],
+      description: "View the account balances",
+      channelType: "all",
+      botOwnerOnly: true,
+      async run(message) {
+        const { balances } = await app.fetchBalances()
+
+        return message.channel.send(
+          await app.getSystemMessage("default", {
+            title: "Account balance",
+            fields: balances.map((balance) => ({
+              name: balance.balanceType,
+              value: `\`${balance.balanceAmount.amount} €\``,
+              inline: true,
+            })),
+          }),
+        )
+      },
+    }),
+    new app.Command({
       name: "transactions",
       aliases: ["list"],
       description: "List the transactions",
@@ -45,7 +66,6 @@ export default new app.Command({
             transactions.booked,
             10,
             (page, index, pages) => {
-              console.log(page)
               return app.getSystemMessage("default", {
                 title: "Transactions passées",
                 description: page
