@@ -13,7 +13,14 @@ export const config = new Config({
     BANKING_AUTHORIZED_OVERDRAFT: z.coerce.number().positive(),
   }),
   client: {
-    intents: ["Guilds", "GuildMessages", "MessageContent"],
+    intents: [
+      "Guilds",
+      "GuildMessages",
+      "MessageContent",
+      "DirectMessages",
+      "DirectMessagePolls",
+      "DirectMessageTyping",
+    ],
     makeCache: Options.cacheWithLimits({
       ...Options.DefaultMakeCacheSettings,
 
