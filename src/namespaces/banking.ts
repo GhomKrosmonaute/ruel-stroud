@@ -9,8 +9,9 @@ import client from "#client"
 import { Logger } from "#logger"
 
 import bankingTable, { Banking } from "#tables/banking.ts"
+import transactionTable from "#tables/transaction.ts"
 import type { Middleware } from "#src/app/command.ts"
-import { getSystemMessage } from "#src/app/util.ts"
+import { dayjs, getSystemMessage } from "#src/app/util.ts"
 
 import * as types from "./banking.types.ts"
 
@@ -114,14 +115,53 @@ export function launchBankingCron() {
   // every 3 hours
   cron.schedule("0 */3 * * *", async () => {
     try {
-      // todo: fetch last transactions and push new one to the database
-      // const transactions = await fetchTransactions()
+      // fetch last transactions and push new one to the database
+      await recordTransactions({
+        from: dayjs().subtract(3, "hours").toDate(),
+        to: new Date(),
+      })
 
       bankingLogger.success("transactions successfully updated")
     } catch (error) {
       bankingLogger.error("transactions failed to update")
     }
   })
+}
+
+export async function recordTransactions(options?: FetchTransactionsOptions) {
+  const { transactions } = await fetchTransactions(options)
+
+  const toInsert: types.Transaction[] = []
+
+  for (const transaction of transactions.booked) {
+    const exists = await transactionTable.query
+      .where({
+        data: JSON.stringify(transaction),
+        date: resolveDate(transaction),
+      })
+      .first()
+
+    if (!exists) {
+      toInsert.push(transaction)
+    }
+  }
+
+  await transactionTable.query.insert(
+    toInsert.map((transaction) => ({
+      amount: +transaction.transactionAmount.amount,
+      date: resolveDate(transaction),
+      data: JSON.stringify(transaction),
+    })),
+  )
+}
+
+export function resolveDate(transaction: types.Transaction) {
+  return dayjs(
+    transaction.bookingDateTime ??
+      transaction.valueDateTime ??
+      transaction.bookingDate ??
+      transaction.valueDate,
+  ).toDate()
 }
 
 export function getBestRemittanceInformation(info: string[]) {

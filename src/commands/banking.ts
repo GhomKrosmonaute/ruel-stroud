@@ -63,7 +63,7 @@ export default new app.Command({
     }),
     new app.Command({
       name: "transactions",
-      aliases: ["list"],
+      aliases: ["list", "trx"],
       description: "List the transactions",
       channelType: "all",
       botOwnerOnly: true,
@@ -96,12 +96,7 @@ export default new app.Command({
                       `${app.formatPrice(transaction.transactionAmount, {
                         padStart: maxPriceLength,
                       })} ${transaction.transactionAmount.amount.startsWith("-") ? "🔻" : "🔺"} <t:${app
-                        .dayjs(
-                          transaction.bookingDateTime ??
-                            transaction.valueDateTime ??
-                            transaction.bookingDate ??
-                            transaction.valueDate,
-                        )
+                        .dayjs(app.resolveDate(transaction))
                         .unix()}:${
                         transaction.bookingDateTime || transaction.valueDateTime
                           ? "f"
@@ -151,6 +146,66 @@ export default new app.Command({
         //   ),
         // })
       },
+      subs: [
+        new app.Command({
+          name: "pending",
+          aliases: ["waiting", "enattente", "attente", "pending"],
+          description: "List the pending transactions",
+          channelType: "all",
+          botOwnerOnly: true,
+          middlewares: [app.bankingMiddleware],
+          async run(message) {
+            const { transactions } = await app.fetchTransactions()
+
+            new app.StaticPaginator({
+              channel: message.channel,
+              placeHolder: await app.getSystemMessage("error", {
+                title: "Transactions en attente",
+                description: "No transactions found",
+              }),
+              idleTime: 600_000,
+              pages: await app.divider(
+                transactions.pending,
+                10,
+                (page, index, pages) => {
+                  return app.getSystemMessage("default", {
+                    title: "Transactions en attente",
+                    description: page
+                      .map(
+                        (transaction) =>
+                          `<t:${app.dayjs(transaction.valueDate, "YYYY-MM-DD").unix()}:D> \`${
+                            transaction.transactionAmount.amount
+                          } €\` ${app.getBestRemittanceInformation(
+                            transaction.remittanceInformationUnstructuredArray,
+                          )}`,
+                      )
+                      .join("\n"),
+                    footer: { text: `Page: ${index + 1} / ${pages.length}` },
+                  })
+                },
+              ),
+            })
+          },
+        }),
+        new app.Command({
+          name: "record",
+          aliases: ["fetch", "load"],
+          description: "Bulk fetch the transactions and save them",
+          channelType: "all",
+          botOwnerOnly: true,
+          middlewares: [app.bankingMiddleware],
+          async run(message) {
+            await app.recordTransactions()
+
+            return message.channel.send(
+              await app.getSystemMessage("default", {
+                title: "Transactions recording",
+                description: "Transactions recorded",
+              }),
+            )
+          },
+        }),
+      ],
     }),
   ],
 })
