@@ -68,18 +68,40 @@ export default new app.Command({
       channelType: "all",
       botOwnerOnly: true,
       middlewares: [app.bankingMiddleware],
+      flags: [
+        {
+          flag: "p",
+          name: "pending",
+          aliases: ["waiting", "future", "next"],
+          description: "List the pending transactions",
+        },
+        {
+          flag: "t",
+          name: "today",
+          aliases: ["day", "date"],
+          description: "List the transactions of today",
+        },
+      ],
       async run(message) {
-        const { transactions } = await app.fetchTransactions()
+        const { pending, today } = message.args
+        const { transactions } = await app.fetchTransactions(
+          today
+            ? {
+                from: new Date(),
+                to: new Date(),
+              }
+            : undefined,
+        )
 
         new app.StaticPaginator({
           channel: message.channel,
           placeHolder: await app.getSystemMessage("error", {
-            title: "Transactions done",
+            title: `Transactions ${pending ? "pending" : "done"}`,
             description: "No transactions found",
           }),
           idleTime: 600_000,
           pages: await app.divider(
-            transactions.booked,
+            transactions[pending ? "pending" : "booked"],
             10,
             (page, index, pages) => {
               const maxPriceLength = Math.max(
@@ -89,7 +111,7 @@ export default new app.Command({
               )
 
               return app.getSystemMessage("default", {
-                title: "Transactions done",
+                title: `Transactions ${pending ? "pending" : "done"}`,
                 description: page
                   .map(
                     (transaction) =>
@@ -117,79 +139,11 @@ export default new app.Command({
             },
           ),
         })
-
-        // new app.StaticPaginator({
-        //   channel: message.channel,
-        //   placeHolder: await app.getSystemMessage("error", {
-        //     title: "Transactions en attente",
-        //     description: "No transactions found",
-        //   }),
-        //   pages: await app.divider(
-        //     transactions.pending,
-        //     10,
-        //     (page, index, pages) => {
-        //       return app.getSystemMessage("default", {
-        //         title: "Transactions en attente",
-        //         description: page
-        //           .map(
-        //             (transaction) =>
-        //               `<t:${app.dayjs(transaction.valueDate, "YYYY-MM-DD").unix()}:D> \`${
-        //                 transaction.transactionAmount.amount
-        //               } €\` ${app.getBestRemittanceInformation(
-        //                 transaction.remittanceInformationUnstructuredArray,
-        //               )}`,
-        //           )
-        //           .join("\n"),
-        //         footer: { text: `Page: ${index + 1} / ${pages.length}` },
-        //       })
-        //     },
-        //   ),
-        // })
       },
       subs: [
         new app.Command({
-          name: "pending",
-          aliases: ["waiting", "enattente", "attente", "pending"],
-          description: "List the pending transactions",
-          channelType: "all",
-          botOwnerOnly: true,
-          middlewares: [app.bankingMiddleware],
-          async run(message) {
-            const { transactions } = await app.fetchTransactions()
-
-            new app.StaticPaginator({
-              channel: message.channel,
-              placeHolder: await app.getSystemMessage("error", {
-                title: "Transactions en attente",
-                description: "No transactions found",
-              }),
-              idleTime: 600_000,
-              pages: await app.divider(
-                transactions.pending,
-                10,
-                (page, index, pages) => {
-                  return app.getSystemMessage("default", {
-                    title: "Transactions en attente",
-                    description: page
-                      .map(
-                        (transaction) =>
-                          `<t:${app.dayjs(transaction.valueDate, "YYYY-MM-DD").unix()}:D> \`${
-                            transaction.transactionAmount.amount
-                          } €\` ${app.getBestRemittanceInformation(
-                            transaction.remittanceInformationUnstructuredArray,
-                          )}`,
-                      )
-                      .join("\n"),
-                    footer: { text: `Page: ${index + 1} / ${pages.length}` },
-                  })
-                },
-              ),
-            })
-          },
-        }),
-        new app.Command({
           name: "record",
-          aliases: ["fetch", "load"],
+          aliases: ["fetch", "load", "save"],
           description: "Bulk fetch the transactions and save them",
           channelType: "all",
           botOwnerOnly: true,
