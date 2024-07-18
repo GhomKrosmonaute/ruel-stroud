@@ -80,7 +80,9 @@ function errorHandler(action: string) {
       bankingLogger.error(
         `${chalk.blueBright(action)} - ${response.status} ${response.statusText}`,
       )
-      throw new Error("Failed to perform banking request")
+      throw new Error(
+        "Failed to perform banking request: Error " + response.status,
+      )
     }
     return response
   }
@@ -179,22 +181,56 @@ export function getBestRemittanceInformation(info: string[]) {
  * Reconnect to the banking API and return the confirmation link
  */
 export async function reconnectBanking(): Promise<string> {
-  const accessToken = await createBankingAccessToken()
+  if (!bankingCache.ACCESS) {
+    const accessToken = await createBankingAccessToken()
 
-  bankingCache.ACCESS = accessToken.access
+    bankingCache.ACCESS = accessToken.access
+  }
 
-  const agreement = await createBankingAgreement()
+  if (!bankingCache.AGREEMENT_ID) {
+    try {
+      const agreement = await createBankingAgreement()
 
-  bankingCache.AGREEMENT_ID = agreement.id
+      bankingCache.AGREEMENT_ID = agreement.id
+    } catch (error) {
+      const accessToken = await createBankingAccessToken()
 
-  const requisition = await createBankingRequisition()
+      bankingCache.ACCESS = accessToken.access
 
-  bankingCache.REQUISITION_ID = requisition.id
+      const agreement = await createBankingAgreement()
+
+      bankingCache.AGREEMENT_ID = agreement.id
+    }
+  }
+
+  let link: string
+
+  try {
+    const requisition = await createBankingRequisition()
+
+    bankingCache.REQUISITION_ID = requisition.id
+
+    link = requisition.link
+  } catch (error) {
+    const accessToken = await createBankingAccessToken()
+
+    bankingCache.ACCESS = accessToken.access
+
+    const agreement = await createBankingAgreement()
+
+    bankingCache.AGREEMENT_ID = agreement.id
+
+    const requisition = await createBankingRequisition()
+
+    bankingCache.REQUISITION_ID = requisition.id
+
+    link = requisition.link
+  }
 
   await bankingTable.query.delete()
   await bankingTable.query.insert(bankingCache)
 
-  return requisition.link
+  return link
 }
 
 async function createBankingAccessToken(): Promise<{
@@ -208,7 +244,11 @@ async function createBankingAccessToken(): Promise<{
   //   -H  "Content-Type: application/json" \
   //   -d "{\"secret_id\":\"string\", \"secret_key\":\"string\"}"
 
-  return fetch("https://bankaccountdata.gocardless.com/api/v2/token/new/", {
+  const url = "https://bankaccountdata.gocardless.com/api/v2/token/new/"
+
+  bankingLogger.log(`POST ${url}`)
+
+  return fetch(url, {
     method: "POST",
     headers: {
       accept: "application/json",
@@ -241,23 +281,25 @@ async function createBankingAgreement(): Promise<{
   //        \"access_valid_for_days\": \"30\",
   //        \"access_scope\": [\"balances\", \"details\", \"transactions\"] }"
 
-  return fetch(
-    "https://bankaccountdata.gocardless.com/api/v2/agreements/enduser/",
-    {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${bankingCache.ACCESS}`,
-      },
-      body: JSON.stringify({
-        institution_id: env.BANKING_INSTITUTION_ID,
-        max_historical_days: 90,
-        access_valid_for_days: 30,
-        access_scope: ["balances", "details", "transactions"],
-      }),
+  const url =
+    "https://bankaccountdata.gocardless.com/api/v2/agreements/enduser/"
+
+  bankingLogger.log(`POST ${url}`)
+
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${bankingCache.ACCESS}`,
     },
-  )
+    body: JSON.stringify({
+      institution_id: env.BANKING_INSTITUTION_ID,
+      max_historical_days: 90,
+      access_valid_for_days: 30,
+      access_scope: ["balances", "details", "transactions"],
+    }),
+  })
     .then(errorHandler("createBankingAgreement"))
     .then((response) => response.json() as any)
 }
@@ -285,7 +327,11 @@ async function createBankingRequisition(): Promise<{
   //        \"agreement\": \"2dea1b84-97b0-4cb4-8805-302c227587c8\",
   //        \"user_language\":\"EN\" }"
 
-  return fetch("https://bankaccountdata.gocardless.com/api/v2/requisitions/", {
+  const url = "https://bankaccountdata.gocardless.com/api/v2/requisitions/"
+
+  bankingLogger.log(`POST ${url}`)
+
+  return fetch(url, {
     method: "POST",
     headers: {
       accept: "application/json",
@@ -321,22 +367,23 @@ export async function fetchTransactions(
   //   -H  "accept: application/json" \
   //   -H  "Authorization: Bearer ACCESS_TOKEN"
 
-  return fetch(
-    `https://bankaccountdata.gocardless.com/api/v2/accounts/${env.BANKING_ACCOUNT_ID}/transactions?${
-      options
-        ? querystring.stringify({
-            from: options.from?.toISOString(),
-            to: options.to?.toISOString(),
-          })
-        : ""
-    }`,
-    {
-      headers: {
-        accept: "application/json",
-        Authorization: `Bearer ${bankingCache.ACCESS}`,
-      },
+  const url = `https://bankaccountdata.gocardless.com/api/v2/accounts/${env.BANKING_ACCOUNT_ID}/transactions?${
+    options
+      ? querystring.stringify({
+          date_from: options.from?.toISOString().slice(0, 10),
+          date_to: options.to?.toISOString().slice(0, 10),
+        })
+      : ""
+  }`
+
+  bankingLogger.log(`GET ${url}`)
+
+  return fetch(url, {
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${bankingCache.ACCESS}`,
     },
-  )
+  })
     .then(errorHandler("fetchTransactions"))
     .then((response) => response.json() as any)
 }
@@ -348,15 +395,16 @@ export async function fetchBalance(): Promise<
   //   -H  "accept: application/json" \
   //   -H  "Authorization: Bearer ACCESS_TOKEN"
 
-  return fetch(
-    `https://bankaccountdata.gocardless.com/api/v2/accounts/${env.BANKING_ACCOUNT_ID}/balances/`,
-    {
-      headers: {
-        accept: "application/json",
-        Authorization: `Bearer ${bankingCache.ACCESS}`,
-      },
+  const url = `https://bankaccountdata.gocardless.com/api/v2/accounts/${env.BANKING_ACCOUNT_ID}/balances/`
+
+  bankingLogger.log(`GET ${url}`)
+
+  return fetch(url, {
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${bankingCache.ACCESS}`,
     },
-  )
+  })
     .then(errorHandler("fetchBalances"))
     .then(
       (response) =>

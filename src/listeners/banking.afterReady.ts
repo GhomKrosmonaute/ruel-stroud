@@ -1,4 +1,5 @@
 import * as app from "#app"
+import fs from "fs/promises"
 
 import bankingTable from "#tables/banking.ts"
 import chalk from "chalk"
@@ -17,24 +18,37 @@ const listener: app.Listener<"afterReady"> = {
       app.bankingCache.REQUISITION_ID = banking.REQUISITION_ID
 
       try {
-        await app.fetchTransactions()
+        await app.fetchTransactions({
+          from: app.dayjs().subtract(1, "day").toDate(),
+          to: new Date(),
+        })
 
         app.bankingLogger.success("session data successfully loaded")
 
-        return app.launchBankingCron()
-      } catch (error) {}
-    }
+        app.launchBankingCron()
+      } catch (error: any) {
+        if (error.message.includes("401")) {
+          try {
+            await app.bankingNeedsToBeReconnected()
 
-    try {
-      await app.bankingNeedsToBeReconnected()
+            app.launchBankingCron()
+          } catch (error) {
+            bankingLogger.error(
+              `${chalk.yellow("once")} ${chalk.blueBright("afterReady")} no session data found and failed to reconnect`,
+            )
 
-      app.launchBankingCron()
-    } catch (error) {
-      bankingLogger.error(
-        `${chalk.yellow("once")} ${chalk.blueBright("afterReady")} no session data found and failed to reconnect`,
-      )
+            process.exit(1)
+          }
+        } else {
+          bankingLogger.error(
+            `${chalk.yellow("once")} ${chalk.blueBright("afterReady")} no session data found and failed to fetch transactions`,
+          )
 
-      process.exit(1)
+          console.error(error)
+
+          process.exit(1)
+        }
+      }
     }
   },
 }

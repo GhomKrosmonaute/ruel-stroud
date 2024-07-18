@@ -1,0 +1,2976 @@
+{
+  "transactions": {
+    "booked": [
+      {
+        "transactionId": "202400600046BD27-95RS9GL",
+        "entryReference": "202400600046BD27-95RS9GL",
+        "bookingDate": "2024-07-17",
+        "valueDate": "2024-07-17",
+        "transactionAmount": {
+          "amount": "-8.22",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "160724 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "66e740af58eb1ae1f53a5de320db9851"
+      },
+      {
+        "transactionId": "202400600045BD27-0050312",
+        "entryReference": "202400600045BD27-0050312",
+        "bookingDate": "2024-07-16",
+        "valueDate": "2024-07-15",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS RETRAIT DAB",
+          "XCPCB001 2024071500050312000001",
+          "3 Retrait(s)"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "2bb581d8f5a1bb791e91fd7430c74462"
+      },
+      {
+        "transactionId": "202400600044BD27-WIBBHIZ",
+        "entryReference": "202400600044BD27-WIBBHIZ",
+        "bookingDate": "2024-07-15",
+        "valueDate": "2024-07-15",
+        "transactionAmount": {
+          "amount": "64.47",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST PAYPAL",
+          "24071514169586538",
+          "INSTANT TRANSFER"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "05674b22918810894411a006efa4077d"
+      },
+      {
+        "transactionId": "202400600043BD27-8XI54ET",
+        "entryReference": "202400600043BD27-8XI54ET",
+        "bookingDate": "2024-07-12",
+        "valueDate": "2024-07-12",
+        "transactionAmount": {
+          "amount": "-2.59",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "110724 CB****8172",
+          "INTERMARCHE    66SAINT ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "5a4088eb7060c2110a20e03ab9c50b3d"
+      },
+      {
+        "transactionId": "202400600039BD27-8VUK228",
+        "entryReference": "202400600039BD27-8VUK228",
+        "bookingDate": "2024-07-11",
+        "valueDate": "2024-07-11",
+        "transactionAmount": {
+          "amount": "-21.48",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "100724 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "65ba2e4da0fdb83105041721b6380e63"
+      },
+      {
+        "transactionId": "202400600042BD27-8U710L6",
+        "entryReference": "202400600042BD27-8U710L6",
+        "bookingDate": "2024-07-11",
+        "valueDate": "2024-07-10",
+        "transactionAmount": {
+          "amount": "-4.50",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "090724 CB****8172",
+          "AU PETRIN D'ANC66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "97e1ccb42e65b2f882b20e3c11c1e72f"
+      },
+      {
+        "transactionId": "202400600041BD27-0CM4JSI",
+        "entryReference": "202400600041BD27-0CM4JSI",
+        "bookingDate": "2024-07-11",
+        "valueDate": "2024-07-10",
+        "transactionAmount": {
+          "amount": "-9.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA FREE MOBILE",
+          "",
+          "FM-33862932-2"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "4cd7de015f01fd03fca76f05425dbb28"
+      },
+      {
+        "transactionId": "202400600040BD27-0CLWPL7",
+        "entryReference": "202400600040BD27-0CLWPL7",
+        "bookingDate": "2024-07-11",
+        "valueDate": "2024-07-10",
+        "transactionAmount": {
+          "amount": "-76.21",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA LLUM",
+          "FACTURE NFO1202400047571",
+          "000000000LLUM202301310106655"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "cda183816d09e86d45703c12b8f9d67d"
+      },
+      {
+        "transactionId": "202400600038BD27-WIALLTT",
+        "entryReference": "202400600038BD27-WIALLTT",
+        "bookingDate": "2024-07-10",
+        "valueDate": "2024-07-10",
+        "transactionAmount": {
+          "amount": "50.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MME DUFAU ABELL",
+          "NOT PROVIDED",
+          "NOTPROVIDED"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "6e10fdbbf2503720238d32121c515d34"
+      },
+      {
+        "transactionId": "202400600036BD27-1256236",
+        "entryReference": "202400600036BD27-1256236",
+        "bookingDate": "2024-07-10",
+        "valueDate": "2024-07-10",
+        "transactionAmount": {
+          "amount": "-770.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR SEPA Mathieu Gine",
+          "Paiement du loyer",
+          "Virement de M CAMILLE ABELLA"
+        ],
+        "bankTransactionCode": "PMNT-ICDT-ESCT",
+        "internalTransactionId": "1745b916d54d3accf64413cc3d0168a4"
+      },
+      {
+        "transactionId": "202400600037BD27-0008892",
+        "entryReference": "202400600037BD27-0008892",
+        "bookingDate": "2024-07-10",
+        "valueDate": "2024-07-09",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024070900008892000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "d0069a0c8c61049af9cee70958c88bce"
+      },
+      {
+        "transactionId": "202400600035BD27-WIAA5JK",
+        "entryReference": "202400600035BD27-WIAA5JK",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-09",
+        "transactionAmount": {
+          "amount": "40.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MR ABELLA OLIVI",
+          "NOT PROVIDED",
+          "NOTPROVIDED"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "59f86ca1d12e7916f6546bfe3ba278f3"
+      },
+      {
+        "transactionId": "202400600034BD27-8SJHLG6",
+        "entryReference": "202400600034BD27-8SJHLG6",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-09",
+        "transactionAmount": {
+          "amount": "-15.29",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "080724 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "bc30987dd2cf165ee656fc5eddbf760f"
+      },
+      {
+        "transactionId": "202400600033BD27-8SJHLG5",
+        "entryReference": "202400600033BD27-8SJHLG5",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-09",
+        "transactionAmount": {
+          "amount": "-4.90",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "080724 CB****8172",
+          "PHAR DEL MONEST66SAINT ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "c4256b3808bb77a1cc188a81552bdf0c"
+      },
+      {
+        "transactionId": "202400600032BD27-WIA3YET",
+        "entryReference": "202400600032BD27-WIA3YET",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-09",
+        "transactionAmount": {
+          "amount": "-6.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "5ba22f1ac0d2539ddc5d2a9aea72c679"
+      },
+      {
+        "transactionId": "202400600031BD27-0CLME9E",
+        "entryReference": "202400600031BD27-0CLME9E",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-09",
+        "transactionAmount": {
+          "amount": "-25.73",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA Eca Assurances",
+          "",
+          "1932212981117V"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "d2e26871e49726aa67835919018949b4"
+      },
+      {
+        "transactionId": "202400600030BD27-0010512",
+        "entryReference": "202400600030BD27-0010512",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-08",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024070800010512000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "0446289e4f5efa007e01762376e2ddce"
+      },
+      {
+        "transactionId": "202400600026BD27-WIA32GG",
+        "entryReference": "202400600026BD27-WIA32GG",
+        "bookingDate": "2024-07-08",
+        "valueDate": "2024-07-08",
+        "transactionAmount": {
+          "amount": "50.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MR ABELLA OLIVI",
+          "NOT PROVIDED",
+          "NOTPROVIDED"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "2ce831418dc86d17cf27c0488c9fdd41"
+      },
+      {
+        "transactionId": "202400600025BD27-WIA1IFF",
+        "entryReference": "202400600025BD27-WIA1IFF",
+        "bookingDate": "2024-07-08",
+        "valueDate": "2024-07-08",
+        "transactionAmount": {
+          "amount": "-14.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "4670d652c31e28b068c0cbf43370fd47"
+      },
+      {
+        "transactionId": "202400600024BD27-8RDYZPF",
+        "entryReference": "202400600024BD27-8RDYZPF",
+        "bookingDate": "2024-07-08",
+        "valueDate": "2024-07-08",
+        "transactionAmount": {
+          "amount": "-40.72",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "060724 CB****8172",
+          "UBER   *EATS   NL HELP.UBER.CO",
+          "40,72EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "0c62ac0da4c14cdee79a3772dc7a6bb7"
+      },
+      {
+        "transactionId": "202400600023BD27-8QW045L",
+        "entryReference": "202400600023BD27-8QW045L",
+        "bookingDate": "2024-07-08",
+        "valueDate": "2024-07-08",
+        "transactionAmount": {
+          "amount": "-11.18",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050724 CB****8172",
+          "CARREFOUR CITY 66PERPIGNAN"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "95586178487fcf385e9937cc168ecf17"
+      },
+      {
+        "transactionId": "202400600022BD27-8QW045K",
+        "entryReference": "202400600022BD27-8QW045K",
+        "bookingDate": "2024-07-08",
+        "valueDate": "2024-07-08",
+        "transactionAmount": {
+          "amount": "-11.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050724 CB****8172",
+          "O'SHANNON      66PERPIGNAN"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "aa8b67decef9160221bac0abf413009f"
+      },
+      {
+        "transactionId": "202400600021BD27-8QW045J",
+        "entryReference": "202400600021BD27-8QW045J",
+        "bookingDate": "2024-07-08",
+        "valueDate": "2024-07-08",
+        "transactionAmount": {
+          "amount": "-3.15",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050724 CB****8172",
+          "CARREFOUR CITY 66PERPIGNAN"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "e4a9d070afa980f3148473b4d16562d4"
+      },
+      {
+        "transactionId": "202400600020BD27-0CKJING",
+        "entryReference": "202400600020BD27-0CKJING",
+        "bookingDate": "2024-07-08",
+        "valueDate": "2024-07-08",
+        "transactionAmount": {
+          "amount": "-5.92",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA MAE Assurance",
+          "MAE Habitation Etudiant",
+          "SP220867843"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "1e9fd11c2ff36261ffb28815a1a51a19"
+      },
+      {
+        "transactionId": "202400600027BD27-0003672",
+        "entryReference": "202400600027BD27-0003672",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-07",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024070700003672000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "04d69bf6dc2a22fed87eb1f0a878247d"
+      },
+      {
+        "transactionId": "202400600019BD27-WI9PB7J",
+        "entryReference": "202400600019BD27-WI9PB7J",
+        "bookingDate": "2024-07-07",
+        "valueDate": "2024-07-07",
+        "transactionAmount": {
+          "amount": "-78.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "0adcadd7d4169dc136d5006d1479175d"
+      },
+      {
+        "transactionId": "202400600028BD27-0033288",
+        "entryReference": "202400600028BD27-0033288",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-06",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024070600033288000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "001ac944f51348f0c6d408283c6acb52"
+      },
+      {
+        "transactionId": "202400600029BD27-0033289",
+        "entryReference": "202400600029BD27-0033289",
+        "bookingDate": "2024-07-09",
+        "valueDate": "2024-07-06",
+        "transactionAmount": {
+          "amount": "-0.75",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS PAI CB DI HORS EEE",
+          "XCPCB200 2024070600033289000001",
+          "COMMISSION CB   050724 GITHUB, I"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "77dd842e3555285e673594f28387d0d0"
+      },
+      {
+        "transactionId": "202400600018BD27-8O2T93G",
+        "entryReference": "202400600018BD27-8O2T93G",
+        "bookingDate": "2024-07-06",
+        "valueDate": "2024-07-06",
+        "transactionAmount": {
+          "amount": "-9.28",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050724 CB****8172",
+          "GITHUB, INC.   US HTTPSGITHUB.",
+          "10,00USD 1 EURO = 1,077586"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "b3fdc55962cd9e2e838528d1e3e89a8a"
+      },
+      {
+        "transactionId": "202400600017BD27-8O2T93F",
+        "entryReference": "202400600017BD27-8O2T93F",
+        "bookingDate": "2024-07-06",
+        "valueDate": "2024-07-06",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050724 CB****8172",
+          "EPICERIE LA REAFR PERPIGNAN",
+          "1,00EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "ec9db37e996fd021671189dbc5cab95e"
+      },
+      {
+        "transactionId": "202400600016BD27-WI9OAP1",
+        "entryReference": "202400600016BD27-WI9OAP1",
+        "bookingDate": "2024-07-06",
+        "valueDate": "2024-07-06",
+        "transactionAmount": {
+          "amount": "-20.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MME KELLY REGNA",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "90e83b7dda7077a8ccfa9ae130301483"
+      },
+      {
+        "transactionId": "202400600015BD27-8LXC806",
+        "entryReference": "202400600015BD27-8LXC806",
+        "bookingDate": "2024-07-05",
+        "valueDate": "2024-07-05",
+        "transactionAmount": {
+          "amount": "-51.98",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "030724 CB****8172",
+          "AMAZON EU SARL 75PAYLI2090401/"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "5b6b5a102c4bfc5a2fb12d292b9140a5"
+      },
+      {
+        "transactionId": "202400600014BD27-8LXC805",
+        "entryReference": "202400600014BD27-8LXC805",
+        "bookingDate": "2024-07-05",
+        "valueDate": "2024-07-05",
+        "transactionAmount": {
+          "amount": "-5.90",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "040724 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "51961d28ad2b059bdc3dd76c2acfef0d"
+      },
+      {
+        "transactionId": "202400600013BD27-8LXC804",
+        "entryReference": "202400600013BD27-8LXC804",
+        "bookingDate": "2024-07-05",
+        "valueDate": "2024-07-05",
+        "transactionAmount": {
+          "amount": "-5.50",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "040724 CB****8172",
+          "dufauret tabac 66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "205f9f50336ca5c7814846f7b7ce67c0"
+      },
+      {
+        "transactionId": "202400600012BD27-0CKPAUB",
+        "entryReference": "202400600012BD27-0CKPAUB",
+        "bookingDate": "2024-07-05",
+        "valueDate": "2024-07-05",
+        "transactionAmount": {
+          "amount": "-4.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA OVH SAS",
+          "payment for order 212203922",
+          "OVH-MWLN8751381F"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "a1ddd737b37fcec55efc76eb4dd0ed83"
+      },
+      {
+        "transactionId": "202400600011BD27-0CKTPCR",
+        "entryReference": "202400600011BD27-0CKTPCR",
+        "bookingDate": "2024-07-05",
+        "valueDate": "2024-07-05",
+        "transactionAmount": {
+          "amount": "-23.30",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA LA CATALANE DE",
+          "RUM:XX410118934SEPA/ICS:FR56ZZZ8",
+          "XX410118934SEPA"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "b516b04d5eaf6ac34e63a54cd2c35f3d"
+      },
+      {
+        "transactionId": "202400600010BD27-0136019",
+        "entryReference": "202400600010BD27-0136019",
+        "bookingDate": "2024-07-05",
+        "valueDate": "2024-07-05",
+        "transactionAmount": {
+          "amount": "-17.10",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "ARRETE COMPTE",
+          "2 EME TRIMESTRE 2024"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "88470a870475487e359cbd280dd9c5a9"
+      },
+      {
+        "transactionId": "202400600009BD27-8KC7O67",
+        "entryReference": "202400600009BD27-8KC7O67",
+        "bookingDate": "2024-07-05",
+        "valueDate": "2024-07-05",
+        "transactionAmount": {
+          "amount": "178.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR CAF DES PYRENEE",
+          "1337008GABELLA      062024ME"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "f6986f731f3582db670c31c1407e89e9"
+      },
+      {
+        "transactionId": "202400600008BD27-WI9CXTE",
+        "entryReference": "202400600008BD27-WI9CXTE",
+        "bookingDate": "2024-07-04",
+        "valueDate": "2024-07-04",
+        "transactionAmount": {
+          "amount": "5.50",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE  MELODIE D",
+          "Virement de MLLE MELODIE DEICHFI",
+          "Virement de MLLE MELODIE DEICHFI"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "a82ebdb103259e104d61a9f6f3a88c1f"
+      },
+      {
+        "transactionId": "202400600007BD27-8KRQGQ4",
+        "entryReference": "202400600007BD27-8KRQGQ4",
+        "bookingDate": "2024-07-04",
+        "valueDate": "2024-07-04",
+        "transactionAmount": {
+          "amount": "-29.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "030724 CB****8172",
+          "ADOBE  *ADOBE  IE DUBLIN",
+          "29,99EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "58f4f5e9a11a3ae61feea8d45a6d345b"
+      },
+      {
+        "transactionId": "202400600006BD27-8K9SX6U",
+        "entryReference": "202400600006BD27-8K9SX6U",
+        "bookingDate": "2024-07-04",
+        "valueDate": "2024-07-04",
+        "transactionAmount": {
+          "amount": "-48.90",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "030724 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "7a9ea77fc8d6f0f0c67273ab05a4bedd"
+      },
+      {
+        "transactionId": "202400600005BD27-8K9SX6T",
+        "entryReference": "202400600005BD27-8K9SX6T",
+        "bookingDate": "2024-07-04",
+        "valueDate": "2024-07-04",
+        "transactionAmount": {
+          "amount": "-23.92",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "030724 CB****8172",
+          "RELAIS CARTOUCH66SAINT ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "af48aa03f3bb3744045982db6e4ce1ac"
+      },
+      {
+        "transactionId": "202400600004BD27-8K9SX6S",
+        "entryReference": "202400600004BD27-8K9SX6S",
+        "bookingDate": "2024-07-04",
+        "valueDate": "2024-07-04",
+        "transactionAmount": {
+          "amount": "-8.75",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "030724 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "38ba6f3fb06b54a97e5c133605824e69"
+      },
+      {
+        "transactionId": "202400600003BD27-8IMB08W",
+        "entryReference": "202400600003BD27-8IMB08W",
+        "bookingDate": "2024-07-03",
+        "valueDate": "2024-07-03",
+        "transactionAmount": {
+          "amount": "-3.49",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "030724 CB****8172",
+          "AMAZON PRIME FR75PAYLI2469664/"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "f7bee6b8eaf9ddc49efc50695727ec52"
+      },
+      {
+        "transactionId": "202400600002BD27-8H13VCV",
+        "entryReference": "202400600002BD27-8H13VCV",
+        "bookingDate": "2024-07-03",
+        "valueDate": "2024-07-03",
+        "transactionAmount": {
+          "amount": "1035.60",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR FRANCE TRAVAIL",
+          "46 664 8364640A 03072024"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "a96463691c71d847a5caf58c9097e616"
+      },
+      {
+        "transactionId": "202400600001BD27-0082055",
+        "entryReference": "202400600001BD27-0082055",
+        "bookingDate": "2024-06-29",
+        "valueDate": "2024-06-28",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024062800082055000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "28f9e9cf00c228fc25e1e4c1eda0b4a6"
+      },
+      {
+        "transactionId": "202400500055BD27-WI7NDXY",
+        "entryReference": "202400500055BD27-WI7NDXY",
+        "bookingDate": "2024-06-28",
+        "valueDate": "2024-06-28",
+        "transactionAmount": {
+          "amount": "-15.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "589845275c0115bc4443d7f4cb36c29b"
+      },
+      {
+        "transactionId": "202400500053BD27-83QH6KD",
+        "entryReference": "202400500053BD27-83QH6KD",
+        "bookingDate": "2024-06-25",
+        "valueDate": "2024-06-24",
+        "transactionAmount": {
+          "amount": "-4.50",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "220624 CB****8172",
+          "BAR LE CANIGOU 66VILLEFRANCHE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "c096dcca1c79aac49c8b41fc723b2dc5"
+      },
+      {
+        "transactionId": "202400500051BD27-WI6UOZW",
+        "entryReference": "202400500051BD27-WI6UOZW",
+        "bookingDate": "2024-06-24",
+        "valueDate": "2024-06-24",
+        "transactionAmount": {
+          "amount": "10.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "6dc71da116f87cc109e4caee5ae07a56"
+      },
+      {
+        "transactionId": "202400500052BD27-0004589",
+        "entryReference": "202400500052BD27-0004589",
+        "bookingDate": "2024-06-25",
+        "valueDate": "2024-06-22",
+        "transactionAmount": {
+          "amount": "-3.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "COTIS CRISTAL ESSENTIEL",
+          "XCCNV063 2024062200004589000001",
+          "CONTRAT CNV0000930335"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "6ab831ae27fe7523b65a51e5a330c94c"
+      },
+      {
+        "transactionId": "202400500050BD27-80XA6G8",
+        "entryReference": "202400500050BD27-80XA6G8",
+        "bookingDate": "2024-06-22",
+        "valueDate": "2024-06-22",
+        "transactionAmount": {
+          "amount": "-2.90",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "210624 CB****8172",
+          "MB MARKET      FR Prades",
+          "2,90EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "a00c572867594cdbdee1c78cf4287b42"
+      },
+      {
+        "transactionId": "202400500049BD27-80XA6G7",
+        "entryReference": "202400500049BD27-80XA6G7",
+        "bookingDate": "2024-06-22",
+        "valueDate": "2024-06-22",
+        "transactionAmount": {
+          "amount": "-2.80",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "210624 CB****8172",
+          "SUMUP  *MB MARKFR PRADES",
+          "2,80EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "962a5871b8803911333fd634de934a8d"
+      },
+      {
+        "transactionId": "202400500054BD27-834Z5EA",
+        "entryReference": "202400500054BD27-834Z5EA",
+        "bookingDate": "2024-06-25",
+        "valueDate": "2024-06-21",
+        "transactionAmount": {
+          "amount": "-20.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "RET DAB H BP PRADES",
+          "RETRAIT DU 210624",
+          "CARTE :       ******8172"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "f4452d258e1048b98d61f4c7b47cf2eb"
+      },
+      {
+        "transactionId": "202400500048BD27-7YRTB5F",
+        "entryReference": "202400500048BD27-7YRTB5F",
+        "bookingDate": "2024-06-21",
+        "valueDate": "2024-06-21",
+        "transactionAmount": {
+          "amount": "-19.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "190624 CB****8172",
+          "NETFLIX COM    75PARIS"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "76a276fa237cce3c87e50c57f4ee0631"
+      },
+      {
+        "transactionId": "202400500047BD27-7X4A0OM",
+        "entryReference": "202400500047BD27-7X4A0OM",
+        "bookingDate": "2024-06-20",
+        "valueDate": "2024-06-20",
+        "transactionAmount": {
+          "amount": "-22.42",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "190624 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "391c6ac3300d4c1d20c9dcc07fc886fa"
+      },
+      {
+        "transactionId": "202400500046BD27-7X4A0OL",
+        "entryReference": "202400500046BD27-7X4A0OL",
+        "bookingDate": "2024-06-20",
+        "valueDate": "2024-06-20",
+        "transactionAmount": {
+          "amount": "-5.55",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "190624 CB****8172",
+          "CARREFOUR CITY 66PERPIGNAN"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "00fcf9d1a19147b182cbf2a88dc0bdc5"
+      },
+      {
+        "transactionId": "202400500045BD27-7X4A0OK",
+        "entryReference": "202400500045BD27-7X4A0OK",
+        "bookingDate": "2024-06-20",
+        "valueDate": "2024-06-20",
+        "transactionAmount": {
+          "amount": "-4.90",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "190624 CB****8172",
+          "SUPERMARCHE PL 66PERPIGNAN"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "17c7c9b13e6e1cff1d26dc569ca3d739"
+      },
+      {
+        "transactionId": "202400500044BD27-WI6BVOC",
+        "entryReference": "202400500044BD27-WI6BVOC",
+        "bookingDate": "2024-06-19",
+        "valueDate": "2024-06-19",
+        "transactionAmount": {
+          "amount": "80.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST Alexis GRIDEL",
+          "BIPT241710300228780_C",
+          "Virement de Alexis GRIDEL"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "0c9f7bdc39415304ec26346ce289d6a3"
+      },
+      {
+        "transactionId": "202400500043BD27-WI5VKKG",
+        "entryReference": "202400500043BD27-WI5VKKG",
+        "bookingDate": "2024-06-16",
+        "valueDate": "2024-06-16",
+        "transactionAmount": {
+          "amount": "10.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "2b7756cd7836003a4770f564e57aea67"
+      },
+      {
+        "transactionId": "202400500039BD27-7I8FWH9",
+        "entryReference": "202400500039BD27-7I8FWH9",
+        "bookingDate": "2024-06-11",
+        "valueDate": "2024-06-11",
+        "transactionAmount": {
+          "amount": "-18.45",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "100624 CB****8172",
+          "INTERMARCHE    66SAINT ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "300fb4a5b8d8f8c35d77f15176703f63"
+      },
+      {
+        "transactionId": "202400500038BD27-7I8FWH8",
+        "entryReference": "202400500038BD27-7I8FWH8",
+        "bookingDate": "2024-06-11",
+        "valueDate": "2024-06-11",
+        "transactionAmount": {
+          "amount": "-8.40",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "100624 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "c5088a95b989ec979dc5592e33d7f632"
+      },
+      {
+        "transactionId": "202400500037BD27-0CGM1Y7",
+        "entryReference": "202400500037BD27-0CGM1Y7",
+        "bookingDate": "2024-06-11",
+        "valueDate": "2024-06-11",
+        "transactionAmount": {
+          "amount": "-9.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA FREE MOBILE",
+          "",
+          "FM-33862932-2"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "b2f3588413560762d34ec4a89f3373f1"
+      },
+      {
+        "transactionId": "202400500042BD27-7GKYCGM",
+        "entryReference": "202400500042BD27-7GKYCGM",
+        "bookingDate": "2024-06-11",
+        "valueDate": "2024-06-10",
+        "transactionAmount": {
+          "amount": "-1.40",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "080624 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "1e6cff0ffadc61861c46c702dc88cdda"
+      },
+      {
+        "transactionId": "202400500041BD27-0CG6JLF",
+        "entryReference": "202400500041BD27-0CG6JLF",
+        "bookingDate": "2024-06-11",
+        "valueDate": "2024-06-10",
+        "transactionAmount": {
+          "amount": "-95.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA LLUM",
+          "FACTURE NFO1202400039975",
+          "000000000LLUM202301310106655"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "26472ec6eb82f404f23e0152020c5bdc"
+      },
+      {
+        "transactionId": "202400500036BD27-WI50IZN",
+        "entryReference": "202400500036BD27-WI50IZN",
+        "bookingDate": "2024-06-10",
+        "valueDate": "2024-06-10",
+        "transactionAmount": {
+          "amount": "10.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "a77159758af9bd7ac733bb1c6357a7e9"
+      },
+      {
+        "transactionId": "202400500035BD27-WI4WKJ3",
+        "entryReference": "202400500035BD27-WI4WKJ3",
+        "bookingDate": "2024-06-10",
+        "valueDate": "2024-06-10",
+        "transactionAmount": {
+          "amount": "100.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "3a71224e1bbb3a48724b9fc3d89d9224"
+      },
+      {
+        "transactionId": "202400500034BD27-7GN9FRL",
+        "entryReference": "202400500034BD27-7GN9FRL",
+        "bookingDate": "2024-06-10",
+        "valueDate": "2024-06-10",
+        "transactionAmount": {
+          "amount": "5.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "465eda885607a6a722208967eac49069"
+      },
+      {
+        "transactionId": "202400500033BD27-0CFLOU4",
+        "entryReference": "202400500033BD27-0CFLOU4",
+        "bookingDate": "2024-06-10",
+        "valueDate": "2024-06-10",
+        "transactionAmount": {
+          "amount": "-5.92",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA MAE Assurance",
+          "MAE Habitation Etudiant",
+          "SP220867843"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "f9b7a773597cb8d254ca745f200f130c"
+      },
+      {
+        "transactionId": "202400500032BD27-1256236",
+        "entryReference": "202400500032BD27-1256236",
+        "bookingDate": "2024-06-10",
+        "valueDate": "2024-06-10",
+        "transactionAmount": {
+          "amount": "-770.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR SEPA Mathieu Gine",
+          "Paiement du loyer",
+          "Virement de M CAMILLE ABELLA"
+        ],
+        "bankTransactionCode": "PMNT-ICDT-ESCT",
+        "internalTransactionId": "9a3ec5e71be5d6ad11e74d174c44fb68"
+      },
+      {
+        "transactionId": "202400500040BD27-7HMZE9H",
+        "entryReference": "202400500040BD27-7HMZE9H",
+        "bookingDate": "2024-06-11",
+        "valueDate": "2024-06-08",
+        "transactionAmount": {
+          "amount": "-20.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "RET DAB H BP ST ESTEVE",
+          "RETRAIT DU 080624",
+          "CARTE :       ******8172"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "a8a995ef9f6f1449d8844aadb70e55ab"
+      },
+      {
+        "transactionId": "202400500031BD27-0009020",
+        "entryReference": "202400500031BD27-0009020",
+        "bookingDate": "2024-06-08",
+        "valueDate": "2024-06-07",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024060700009020000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "5fddf745707adacbb38b184402ed5abb"
+      },
+      {
+        "transactionId": "202400500030BD27-7C47Z5N",
+        "entryReference": "202400500030BD27-7C47Z5N",
+        "bookingDate": "2024-06-07",
+        "valueDate": "2024-06-07",
+        "transactionAmount": {
+          "amount": "-90.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "070624 CB****8172",
+          "HELLOFRESH     NL Amsterdam",
+          "90,99EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "8d8133ea5b6fe14ede026c03cc56f0bd"
+      },
+      {
+        "transactionId": "202400500029BD27-7C47Z5M",
+        "entryReference": "202400500029BD27-7C47Z5M",
+        "bookingDate": "2024-06-07",
+        "valueDate": "2024-06-07",
+        "transactionAmount": {
+          "amount": "-22.44",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "070624 CB****8172",
+          "HELLOFRESH     NL Amsterdam",
+          "22,44EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "02363f6f3a17774d5b92c23cb8c03340"
+      },
+      {
+        "transactionId": "202400500028BD27-WI4GXTD",
+        "entryReference": "202400500028BD27-WI4GXTD",
+        "bookingDate": "2024-06-07",
+        "valueDate": "2024-06-07",
+        "transactionAmount": {
+          "amount": "-60.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "9293c6468b63cc94702dd4dc74e41e46"
+      },
+      {
+        "transactionId": "202400500027BD27-7BMAIEH",
+        "entryReference": "202400500027BD27-7BMAIEH",
+        "bookingDate": "2024-06-07",
+        "valueDate": "2024-06-07",
+        "transactionAmount": {
+          "amount": "-159.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "060624 CB****8172",
+          "CAF66          66PERPIGNAN"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "44e4bbb73bbf2b43cd6e27736298b1a0"
+      },
+      {
+        "transactionId": "202400500026BD27-7BMAIEG",
+        "entryReference": "202400500026BD27-7BMAIEG",
+        "bookingDate": "2024-06-07",
+        "valueDate": "2024-06-07",
+        "transactionAmount": {
+          "amount": "-5.08",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "060624 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "ad0a394372a71feb4bf49a22a5d3df1e"
+      },
+      {
+        "transactionId": "202400500025BD27-0CFY1SZ",
+        "entryReference": "202400500025BD27-0CFY1SZ",
+        "bookingDate": "2024-06-07",
+        "valueDate": "2024-06-07",
+        "transactionAmount": {
+          "amount": "-25.73",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA Eca Assurances",
+          "",
+          "1932212981117V"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "700a2f4143ad0638cc6d873d5c3a071a"
+      },
+      {
+        "transactionId": "202400500024BD27-0009027",
+        "entryReference": "202400500024BD27-0009027",
+        "bookingDate": "2024-06-07",
+        "valueDate": "2024-06-06",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024060600009027000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "fb2d525634fe38368a601d3aabf3055b"
+      },
+      {
+        "transactionId": "202400500023BD27-WI4AP9W",
+        "entryReference": "202400500023BD27-WI4AP9W",
+        "bookingDate": "2024-06-06",
+        "valueDate": "2024-06-06",
+        "transactionAmount": {
+          "amount": "-77.50",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "fa1b6e164cacc6e5736c09234a906f74"
+      },
+      {
+        "transactionId": "202400500022BD27-7AGOM9D",
+        "entryReference": "202400500022BD27-7AGOM9D",
+        "bookingDate": "2024-06-06",
+        "valueDate": "2024-06-06",
+        "transactionAmount": {
+          "amount": "-29.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050624 CB****8172",
+          "ADOBE  *ADOBE  IE DUBLIN",
+          "29,99EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "dffab31fe09f51c9cff75110020cee88"
+      },
+      {
+        "transactionId": "202400500021BD27-79YR9XS",
+        "entryReference": "202400500021BD27-79YR9XS",
+        "bookingDate": "2024-06-06",
+        "valueDate": "2024-06-06",
+        "transactionAmount": {
+          "amount": "-103.91",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050624 CB****8172",
+          "LIDL 3150      66SAINT ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "97a90d9a992e9294e139f94c32df8b9e"
+      },
+      {
+        "transactionId": "202400500020BD27-79YR9XR",
+        "entryReference": "202400500020BD27-79YR9XR",
+        "bookingDate": "2024-06-06",
+        "valueDate": "2024-06-06",
+        "transactionAmount": {
+          "amount": "-15.47",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050624 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "83138d98d38cc6740fb1cbb32a535fd1"
+      },
+      {
+        "transactionId": "202400500019BD27-79YR9XQ",
+        "entryReference": "202400500019BD27-79YR9XQ",
+        "bookingDate": "2024-06-06",
+        "valueDate": "2024-06-06",
+        "transactionAmount": {
+          "amount": "-3.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050624 CB****8172",
+          "TABAC LA MIRAND66SAINT ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "ec6b561ab4cd5a0a7299b93c05390b3c"
+      },
+      {
+        "transactionId": "202400500018BD27-79YR9XP",
+        "entryReference": "202400500018BD27-79YR9XP",
+        "bookingDate": "2024-06-06",
+        "valueDate": "2024-06-06",
+        "transactionAmount": {
+          "amount": "-2.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050624 CB****8172",
+          "AU PETRIN D'ANC66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "33190f714473a016ddf1343c35eb18b8"
+      },
+      {
+        "transactionId": "202400500017BD27-0010468",
+        "entryReference": "202400500017BD27-0010468",
+        "bookingDate": "2024-06-06",
+        "valueDate": "2024-06-05",
+        "transactionAmount": {
+          "amount": "-0.74",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS PAI CB DI HORS EEE",
+          "XCPCB200 2024060500010468000001",
+          "COMMISSION CB   050624 GITHUB, I"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "db4dea36f2a067061d51d1f4e4c6188e"
+      },
+      {
+        "transactionId": "202400500016BD27-0010467",
+        "entryReference": "202400500016BD27-0010467",
+        "bookingDate": "2024-06-06",
+        "valueDate": "2024-06-05",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024060500010467000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "f4efb74be8dc730fdab8aec0545d5468"
+      },
+      {
+        "transactionId": "202400500015BD27-78T53AM",
+        "entryReference": "202400500015BD27-78T53AM",
+        "bookingDate": "2024-06-05",
+        "valueDate": "2024-06-05",
+        "transactionAmount": {
+          "amount": "-9.21",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "050624 CB****8172",
+          "GITHUB, INC.   US HTTPSGITHUB.",
+          "10,00USD 1 EURO = 1,085776"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "f26d9fbf11d6494aff02f89f5483c112"
+      },
+      {
+        "transactionId": "202400500014BD27-78DL5W7",
+        "entryReference": "202400500014BD27-78DL5W7",
+        "bookingDate": "2024-06-05",
+        "valueDate": "2024-06-05",
+        "transactionAmount": {
+          "amount": "1070.12",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR FRANCE TRAVAIL",
+          "46 664 8364640A 05062024"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "d2b9d3e4c9cb1ccfb2656b0e2b0a6e34"
+      },
+      {
+        "transactionId": "202400500013BD27-WI3W4JJ",
+        "entryReference": "202400500013BD27-WI3W4JJ",
+        "bookingDate": "2024-06-05",
+        "valueDate": "2024-06-05",
+        "transactionAmount": {
+          "amount": "-3.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "3db1f81503d75e63f620c4696779e6a9"
+      },
+      {
+        "transactionId": "202400500012BD27-0CF4GW6",
+        "entryReference": "202400500012BD27-0CF4GW6",
+        "bookingDate": "2024-06-05",
+        "valueDate": "2024-06-05",
+        "transactionAmount": {
+          "amount": "-4.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA OVH SAS",
+          "payment for order 210560055",
+          "OVH-MWLN8751381F"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "c2ec6e37d4f0e0e78526fac0b5232e83"
+      },
+      {
+        "transactionId": "202400500011BD27-76Q3V9R",
+        "entryReference": "202400500011BD27-76Q3V9R",
+        "bookingDate": "2024-06-05",
+        "valueDate": "2024-06-05",
+        "transactionAmount": {
+          "amount": "354.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR CAF DES PYRENEE",
+          "1337008GABELLA      052024ME"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "150aa541e61edab766dd0ab11b0e9fc5"
+      },
+      {
+        "transactionId": "202400500010BD27-775LJT5",
+        "entryReference": "202400500010BD27-775LJT5",
+        "bookingDate": "2024-06-04",
+        "valueDate": "2024-06-04",
+        "transactionAmount": {
+          "amount": "-36.47",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "020624 CB****8172",
+          "UBER   *EATS   NL HELP.UBER.CO",
+          "36,47EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "783a54f38fb3b66fc2ec5d54e34b9c6c"
+      },
+      {
+        "transactionId": "202400500008BD27-0801676",
+        "entryReference": "202400500008BD27-0801676",
+        "bookingDate": "2024-06-03",
+        "valueDate": "2024-06-03",
+        "transactionAmount": {
+          "amount": "-0.11",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "P LIB Prelev impots int"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-OTHR",
+        "internalTransactionId": "136f604efc7567ce4146e20214e91a1e"
+      },
+      {
+        "transactionId": "202400500007BD27-0801676",
+        "entryReference": "202400500007BD27-0801676",
+        "bookingDate": "2024-06-03",
+        "valueDate": "2024-06-03",
+        "transactionAmount": {
+          "amount": "-0.15",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "Prelev. Sociaux int.part"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "acd729f36986b485dc3288cb8656bb57"
+      },
+      {
+        "transactionId": "202400500006BD27-0801676",
+        "entryReference": "202400500006BD27-0801676",
+        "bookingDate": "2024-06-03",
+        "valueDate": "2024-06-03",
+        "transactionAmount": {
+          "amount": "0.87",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "INT/PARTS SOC.",
+          "INTERETS EXERCICE 2023"
+        ],
+        "bankTransactionCode": "SECU-MCOP-OTHR",
+        "internalTransactionId": "3abd4b794464eaf5a01bd324929bf0f6"
+      },
+      {
+        "transactionId": "202400500005BD27-WI2SPXD",
+        "entryReference": "202400500005BD27-WI2SPXD",
+        "bookingDate": "2024-06-02",
+        "valueDate": "2024-06-02",
+        "transactionAmount": {
+          "amount": "40.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE  MELODIE D",
+          "Virement de MLLE MELODIE DEICHFI",
+          "Virement de MLLE MELODIE DEICHFI"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "752143e2d45327266bf4067f7de43000"
+      },
+      {
+        "transactionId": "202400500009BD27-7627YW9",
+        "entryReference": "202400500009BD27-7627YW9",
+        "bookingDate": "2024-06-04",
+        "valueDate": "2024-06-01",
+        "transactionAmount": {
+          "amount": "-40.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "RET DAB H BP ST ESTEVE",
+          "RETRAIT DU 010624",
+          "CARTE :       ******8172"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "76a99dc95cdebfd5fe498861185f1c20"
+      },
+      {
+        "transactionId": "202400500004BD27-727029F",
+        "entryReference": "202400500004BD27-727029F",
+        "bookingDate": "2024-06-01",
+        "valueDate": "2024-06-01",
+        "transactionAmount": {
+          "amount": "-29.16",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "300524 CB****8172",
+          "UBER   *EATS   NL HELP.UBER.CO",
+          "29,16EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "3e1cc02ac10f914b1246e50fd4160bc3"
+      },
+      {
+        "transactionId": "202400500003BD27-71P2NJO",
+        "entryReference": "202400500003BD27-71P2NJO",
+        "bookingDate": "2024-06-01",
+        "valueDate": "2024-06-01",
+        "transactionAmount": {
+          "amount": "-48.14",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "310524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "1721c768a13adeda4066046717f08829"
+      },
+      {
+        "transactionId": "202400500002BD27-WI2RQ60",
+        "entryReference": "202400500002BD27-WI2RQ60",
+        "bookingDate": "2024-06-01",
+        "valueDate": "2024-06-01",
+        "transactionAmount": {
+          "amount": "20.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE  MELODIE D",
+          "Virement de MLLE MELODIE DEICHFI",
+          "Virement de MLLE MELODIE DEICHFI"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "6e71779d7ce5c0560f8f0aaa67a92fbc"
+      },
+      {
+        "transactionId": "202400500001BD27-WI2RQ5H",
+        "entryReference": "202400500001BD27-WI2RQ5H",
+        "bookingDate": "2024-06-01",
+        "valueDate": "2024-06-01",
+        "transactionAmount": {
+          "amount": "20.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE  MELODIE D",
+          "Virement de MLLE MELODIE DEICHFI",
+          "Virement de MLLE MELODIE DEICHFI"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "e029bccd86baed57eab916e29f632285"
+      },
+      {
+        "transactionId": "202400400049BD27-WI2JUCX",
+        "entryReference": "202400400049BD27-WI2JUCX",
+        "bookingDate": "2024-05-31",
+        "valueDate": "2024-05-31",
+        "transactionAmount": {
+          "amount": "50.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MME DUFAU ABELL",
+          "NOT PROVIDED",
+          "NOTPROVIDED"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "b5cde199556abb310e1e4ecbf63d2870"
+      },
+      {
+        "transactionId": "202400400048BD27-WI2DUCI",
+        "entryReference": "202400400048BD27-WI2DUCI",
+        "bookingDate": "2024-05-30",
+        "valueDate": "2024-05-30",
+        "transactionAmount": {
+          "amount": "30.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST Alexis GRIDEL",
+          "BIPT241510300635166_C",
+          "Virement de Alexis GRIDEL"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "4c9a1dfe0b2d0f5d3dd6177b99663427"
+      },
+      {
+        "transactionId": "202400400047BD27-WI2DT1D",
+        "entryReference": "202400400047BD27-WI2DT1D",
+        "bookingDate": "2024-05-30",
+        "valueDate": "2024-05-30",
+        "transactionAmount": {
+          "amount": "0.01",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST Alexis GRIDEL",
+          "BIPT241510300644030_C",
+          "Virement de Alexis GRIDEL"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "d461af9d63a203472515b03f1e4155f2"
+      },
+      {
+        "transactionId": "202400400046BD27-6YDZQ10",
+        "entryReference": "202400400046BD27-6YDZQ10",
+        "bookingDate": "2024-05-30",
+        "valueDate": "2024-05-30",
+        "transactionAmount": {
+          "amount": "-4.97",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "290524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "ecaa2ebb0aa987c0a76bb13457d93ee7"
+      },
+      {
+        "transactionId": "202400400045BD27-6WQGBZQ",
+        "entryReference": "202400400045BD27-6WQGBZQ",
+        "bookingDate": "2024-05-29",
+        "valueDate": "2024-05-29",
+        "transactionAmount": {
+          "amount": "-4.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "280524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "2b986e36489081a31023d78e314ac318"
+      },
+      {
+        "transactionId": "202400400044BD27-WI1TPOY",
+        "entryReference": "202400400044BD27-WI1TPOY",
+        "bookingDate": "2024-05-28",
+        "valueDate": "2024-05-28",
+        "transactionAmount": {
+          "amount": "5.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "05d54a1028c98b6d0f9bf004d34529ef"
+      },
+      {
+        "transactionId": "202400400043BD27-6TFFCD2",
+        "entryReference": "202400400043BD27-6TFFCD2",
+        "bookingDate": "2024-05-27",
+        "valueDate": "2024-05-27",
+        "transactionAmount": {
+          "amount": "-26.89",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "250524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "411831303096180c0788cf01881166a6"
+      },
+      {
+        "transactionId": "202400400042BD27-6TFFCD1",
+        "entryReference": "202400400042BD27-6TFFCD1",
+        "bookingDate": "2024-05-27",
+        "valueDate": "2024-05-27",
+        "transactionAmount": {
+          "amount": "-8.90",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "250524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "973a4299a6220e3a256d771234b2ce21"
+      },
+      {
+        "transactionId": "202400400041BD27-6TFFCD0",
+        "entryReference": "202400400041BD27-6TFFCD0",
+        "bookingDate": "2024-05-27",
+        "valueDate": "2024-05-27",
+        "transactionAmount": {
+          "amount": "-4.70",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "250524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "fe34f1e6c0e35d4a336b7653328686e2"
+      },
+      {
+        "transactionId": "202400400040BD27-8618667",
+        "entryReference": "202400400040BD27-8618667",
+        "bookingDate": "2024-05-27",
+        "valueDate": "2024-05-27",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR SEPA Dylan Lambert",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-ICDT-ESCT",
+        "internalTransactionId": "9cce60f328076927e572e633eafc1a6a"
+      },
+      {
+        "transactionId": "202400400039BD27-6Q4B9EZ",
+        "entryReference": "202400400039BD27-6Q4B9EZ",
+        "bookingDate": "2024-05-25",
+        "valueDate": "2024-05-25",
+        "transactionAmount": {
+          "amount": "-15.29",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "240524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "ef73ec89359a82d5357c005f6a7677df"
+      },
+      {
+        "transactionId": "202400400038BD27-WI1ELXE",
+        "entryReference": "202400400038BD27-WI1ELXE",
+        "bookingDate": "2024-05-24",
+        "valueDate": "2024-05-24",
+        "transactionAmount": {
+          "amount": "50.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MME DUFAU ABELL",
+          "NOT PROVIDED",
+          "HB de Mamie Nany"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "8e3a5f4c1a84828d26005c252067c7eb"
+      },
+      {
+        "transactionId": "202400400037BD27-6OGRJT3",
+        "entryReference": "202400400037BD27-6OGRJT3",
+        "bookingDate": "2024-05-24",
+        "valueDate": "2024-05-24",
+        "transactionAmount": {
+          "amount": "-20.50",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "230524 CB****8172",
+          "RESTO LA MAISON66SAINT ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "7c38457ae048890b57c42bb828461c38"
+      },
+      {
+        "transactionId": "202400400036BD27-6OGRJT2",
+        "entryReference": "202400400036BD27-6OGRJT2",
+        "bookingDate": "2024-05-24",
+        "valueDate": "2024-05-24",
+        "transactionAmount": {
+          "amount": "-15.67",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "230524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "f173ee4f954067137c0205755bb6a33f"
+      },
+      {
+        "transactionId": "202400400035BD27-WI1BYIH",
+        "entryReference": "202400400035BD27-WI1BYIH",
+        "bookingDate": "2024-05-23",
+        "valueDate": "2024-05-23",
+        "transactionAmount": {
+          "amount": "50.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "7041a545fe61d743b3729bf24153115b"
+      },
+      {
+        "transactionId": "202400400034BD27-0009011",
+        "entryReference": "202400400034BD27-0009011",
+        "bookingDate": "2024-05-23",
+        "valueDate": "2024-05-22",
+        "transactionAmount": {
+          "amount": "-3.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "COTIS CRISTAL ESSENTIEL",
+          "XCCNV063 2024052200009011000001",
+          "CONTRAT CNV0000930335"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "cd2220a0a7e988d2d81af61e9a0b8fb8"
+      },
+      {
+        "transactionId": "202400400033BD27-6CW05RD",
+        "entryReference": "202400400033BD27-6CW05RD",
+        "bookingDate": "2024-05-17",
+        "valueDate": "2024-05-17",
+        "transactionAmount": {
+          "amount": "-23.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "160524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "c0aac655eea517e6c08093b7204a2d06"
+      },
+      {
+        "transactionId": "202400400031BD27-69KXFZO",
+        "entryReference": "202400400031BD27-69KXFZO",
+        "bookingDate": "2024-05-15",
+        "valueDate": "2024-05-15",
+        "transactionAmount": {
+          "amount": "-8.98",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "140524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "4cbb2ab22e25f3c8425e7615c6dd2e7c"
+      },
+      {
+        "transactionId": "202400400032BD27-0CBNLJZ",
+        "entryReference": "202400400032BD27-0CBNLJZ",
+        "bookingDate": "2024-05-15",
+        "valueDate": "2024-05-14",
+        "transactionAmount": {
+          "amount": "-42.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA Orange SA-ORAN",
+          "Votre abonnement fibre (facture:",
+          "EPCB202302118754221"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "b331d43681147e3c67f013d0f6674c3c"
+      },
+      {
+        "transactionId": "202400400030BD27-WI05VGI",
+        "entryReference": "202400400030BD27-WI05VGI",
+        "bookingDate": "2024-05-14",
+        "valueDate": "2024-05-14",
+        "transactionAmount": {
+          "amount": "35.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MME DUFAU ABELL",
+          "NOT PROVIDED",
+          "NOTPROVIDED"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "6de194ab78ef679eb9e51832a2607d1e"
+      },
+      {
+        "transactionId": "202400400029BD27-66RRTFO",
+        "entryReference": "202400400029BD27-66RRTFO",
+        "bookingDate": "2024-05-13",
+        "valueDate": "2024-05-13",
+        "transactionAmount": {
+          "amount": "-4.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "110524 CB****8172",
+          "EPICERIE LA REAFR PERPIGNAN",
+          "4,00EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "df9831114779ce964ca4621934b60bbe"
+      },
+      {
+        "transactionId": "202400400028BD27-669WJAH",
+        "entryReference": "202400400028BD27-669WJAH",
+        "bookingDate": "2024-05-13",
+        "valueDate": "2024-05-13",
+        "transactionAmount": {
+          "amount": "-6.64",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "120524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "18abcfb21f6a6a9f9f1edc255c8324fa"
+      },
+      {
+        "transactionId": "202400400027BD27-669WJAG",
+        "entryReference": "202400400027BD27-669WJAG",
+        "bookingDate": "2024-05-13",
+        "valueDate": "2024-05-13",
+        "transactionAmount": {
+          "amount": "-3.35",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "110524 CB****8172",
+          "CARREFOUR CITY 66PERPIGNAN"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "be5fc48d3f881d3583b09a94ce9d5fff"
+      },
+      {
+        "transactionId": "202400400026BD27-61TCZAV",
+        "entryReference": "202400400026BD27-61TCZAV",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "-80.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "100524 CB****8172",
+          "HELLOFRESH     NL Amsterdam",
+          "80,99EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "cb877a7e0320b294a3cbc64869c263cc"
+      },
+      {
+        "transactionId": "202400400025BD27-61TCZAU",
+        "entryReference": "202400400025BD27-61TCZAU",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "-17.94",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "100524 CB****8172",
+          "HELLOFRESH     NL Amsterdam",
+          "17,94EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "ca3367eb7c74628c7306fe3656f6ba7d"
+      },
+      {
+        "transactionId": "202400400024BD27-61T9DRF",
+        "entryReference": "202400400024BD27-61T9DRF",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "-5.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "070524 CB****8172",
+          "UBER   *ONE    NL HELP.UBER.CO",
+          "5,99EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "0e120f023fcd5d32eca973a838461aaf"
+      },
+      {
+        "transactionId": "202400400023BD27-61BBG3Q",
+        "entryReference": "202400400023BD27-61BBG3Q",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "-31.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "080524 CB****8172",
+          "ENCRES ET TONER80VRON"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "957d9d0d8d2394f8d7a9dd44a9ff384b"
+      },
+      {
+        "transactionId": "202400400022BD27-61DLU2E",
+        "entryReference": "202400400022BD27-61DLU2E",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "5.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "7e281c720e12dd77f90b20e71b03a359"
+      },
+      {
+        "transactionId": "202400400021BD27-0CAVN3U",
+        "entryReference": "202400400021BD27-0CAVN3U",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "-25.73",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA Eca Assurances",
+          "",
+          "1932212981117V"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "5cf36e26d7242bf25c6be8f1e9496258"
+      },
+      {
+        "transactionId": "202400400020BD27-0CAZV28",
+        "entryReference": "202400400020BD27-0CAZV28",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "-9.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA FREE MOBILE",
+          "",
+          "FM-33862932-2"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "aa21d6229f9ed8dcef85a8617f8f02b5"
+      },
+      {
+        "transactionId": "202400400019BD27-0CB2Z5R",
+        "entryReference": "202400400019BD27-0CB2Z5R",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "-87.37",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA LLUM",
+          "FACTURE NFO1202400038301",
+          "000000000LLUM202301310106655"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "bbef9941b21510165997d6b87307a9cc"
+      },
+      {
+        "transactionId": "202400400018BD27-1256236",
+        "entryReference": "202400400018BD27-1256236",
+        "bookingDate": "2024-05-10",
+        "valueDate": "2024-05-10",
+        "transactionAmount": {
+          "amount": "-770.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR SEPA Mathieu Gine",
+          "Paiement du loyer",
+          "Virement de M CAMILLE ABELLA"
+        ],
+        "bankTransactionCode": "PMNT-ICDT-ESCT",
+        "internalTransactionId": "78a33d46a95aa547ec00d0af2b751438"
+      },
+      {
+        "transactionId": "202400400017BD27-0CAMMGN",
+        "entryReference": "202400400017BD27-0CAMMGN",
+        "bookingDate": "2024-05-08",
+        "valueDate": "2024-05-08",
+        "transactionAmount": {
+          "amount": "-5.92",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA MAE Assurance",
+          "MAE Habitation Etudiant",
+          "SP220867843"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "f2dff45cfb2b939b1848f85e169261bf"
+      },
+      {
+        "transactionId": "202400400016BD27-5WUJTQO",
+        "entryReference": "202400400016BD27-5WUJTQO",
+        "bookingDate": "2024-05-07",
+        "valueDate": "2024-05-07",
+        "transactionAmount": {
+          "amount": "-75.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "060524 CB****8172",
+          "HELLOFRESH     NL Amsterdam",
+          "75,99EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "727a4cc59cff693281f836cb050567ea"
+      },
+      {
+        "transactionId": "202400400015BD27-5WUJTQN",
+        "entryReference": "202400400015BD27-5WUJTQN",
+        "bookingDate": "2024-05-07",
+        "valueDate": "2024-05-07",
+        "transactionAmount": {
+          "amount": "-35.88",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "060524 CB****8172",
+          "HELLOFRESH     NL Amsterdam",
+          "35,88EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "a753da44362808f2333276f5d22cc8c3"
+      },
+      {
+        "transactionId": "202400400014BD27-5WUJTQM",
+        "entryReference": "202400400014BD27-5WUJTQM",
+        "bookingDate": "2024-05-07",
+        "valueDate": "2024-05-07",
+        "transactionAmount": {
+          "amount": "-29.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "060524 CB****8172",
+          "ADOBE  *ADOBE  IE DUBLIN",
+          "29,99EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "e1d3e34ece71a81a75e7383dd04b6a2e"
+      },
+      {
+        "transactionId": "202400400012BD27-5WCMSB8",
+        "entryReference": "202400400012BD27-5WCMSB8",
+        "bookingDate": "2024-05-07",
+        "valueDate": "2024-05-07",
+        "transactionAmount": {
+          "amount": "-19.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "060524 CB****8172",
+          "NETFLIX COM    75PARIS"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "2245e691fb4889a5213bce83d9bf0007"
+      },
+      {
+        "transactionId": "202400400011BD27-5WCMSB7",
+        "entryReference": "202400400011BD27-5WCMSB7",
+        "bookingDate": "2024-05-07",
+        "valueDate": "2024-05-07",
+        "transactionAmount": {
+          "amount": "-9.51",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "060524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "e7a9c0ad0ef1fe69318246a71d619012"
+      },
+      {
+        "transactionId": "202400400010BD27-0CA3HGI",
+        "entryReference": "202400400010BD27-0CA3HGI",
+        "bookingDate": "2024-05-07",
+        "valueDate": "2024-05-07",
+        "transactionAmount": {
+          "amount": "-4.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "PRLV SEPA OVH SAS",
+          "payment for order 209097749",
+          "OVH-MWLN8751381F"
+        ],
+        "bankTransactionCode": "PMNT-RDDT-ESDD",
+        "internalTransactionId": "3aa0bb4c136bf1278b29582c42bfcaf2"
+      },
+      {
+        "transactionId": "202400400013BD27-5VR69PE",
+        "entryReference": "202400400013BD27-5VR69PE",
+        "bookingDate": "2024-05-07",
+        "valueDate": "2024-05-06",
+        "transactionAmount": {
+          "amount": "-20.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "RET DAB H BP ST ESTEVE",
+          "RETRAIT DU 060524",
+          "CARTE :       ******8172"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "8d440b057633054859cff2b7b75123d4"
+      },
+      {
+        "transactionId": "202400400009BD27-0011785",
+        "entryReference": "202400400009BD27-0011785",
+        "bookingDate": "2024-05-07",
+        "valueDate": "2024-05-06",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024050600011785000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "c04d3ef8249d2bbdbd1f5985c7966c5c"
+      },
+      {
+        "transactionId": "202400400008BD27-WHYSBPP",
+        "entryReference": "202400400008BD27-WHYSBPP",
+        "bookingDate": "2024-05-06",
+        "valueDate": "2024-05-06",
+        "transactionAmount": {
+          "amount": "-77.50",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "a25dcacb6f6e159e953c32bd8d8c5745"
+      },
+      {
+        "transactionId": "202400400007BD27-8138897",
+        "entryReference": "202400400007BD27-8138897",
+        "bookingDate": "2024-05-06",
+        "valueDate": "2024-05-06",
+        "transactionAmount": {
+          "amount": "-100.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR SEPA Mr Olivier Abel",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-ICDT-ESCT",
+        "internalTransactionId": "ae590d3d76635ab1bdc9166eae088c6a"
+      },
+      {
+        "transactionId": "202400400006BD27-5PSV9DS",
+        "entryReference": "202400400006BD27-5PSV9DS",
+        "bookingDate": "2024-05-06",
+        "valueDate": "2024-05-06",
+        "transactionAmount": {
+          "amount": "354.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR CAF DES PYRENEE",
+          "1337008GABELLA      042024ME"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "f1eebb4828b13c2b961cc7eaafa762a0"
+      },
+      {
+        "transactionId": "202400400005BD27-5PSUZSD",
+        "entryReference": "202400400005BD27-5PSUZSD",
+        "bookingDate": "2024-05-06",
+        "valueDate": "2024-05-06",
+        "transactionAmount": {
+          "amount": "1035.60",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR FRANCE TRAVAIL",
+          "46 664 8364640A 06052024"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "fe19c753296e04027a40b8e0b6485126"
+      },
+      {
+        "transactionId": "202400400004BD27-5PSU3VL",
+        "entryReference": "202400400004BD27-5PSU3VL",
+        "bookingDate": "2024-05-06",
+        "valueDate": "2024-05-06",
+        "transactionAmount": {
+          "amount": "70.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR EUROPEENNE DE C"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "a9a371333de1ac5345b5927c189130de"
+      },
+      {
+        "transactionId": "202400400003BD27-5PQHGL3",
+        "entryReference": "202400400003BD27-5PQHGL3",
+        "bookingDate": "2024-05-03",
+        "valueDate": "2024-05-03",
+        "transactionAmount": {
+          "amount": "-7.13",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "020524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "2fff2ad0896bf38a92de09aade00e5f0"
+      },
+      {
+        "transactionId": "202400400002BD27-5O2YIAR",
+        "entryReference": "202400400002BD27-5O2YIAR",
+        "bookingDate": "2024-05-02",
+        "valueDate": "2024-05-02",
+        "transactionAmount": {
+          "amount": "-18.38",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "010524 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "dc8006057cb987f456b9cfb07aecf482"
+      },
+      {
+        "transactionId": "202400400001BD27-5O2YIAQ",
+        "entryReference": "202400400001BD27-5O2YIAQ",
+        "bookingDate": "2024-05-02",
+        "valueDate": "2024-05-02",
+        "transactionAmount": {
+          "amount": "-10.32",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "300424 CB****8172",
+          "carrefour city 66SAINT-ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "6f3add8b1c79643bacc6956103062245"
+      },
+      {
+        "transactionId": "202400300079BD27-5KRV92N",
+        "entryReference": "202400300079BD27-5KRV92N",
+        "bookingDate": "2024-04-30",
+        "valueDate": "2024-04-30",
+        "transactionAmount": {
+          "amount": "-14.66",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "290424 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "292fac74d8b2d55fed70bf61ccc66f56"
+      },
+      {
+        "transactionId": "202400300076BD27-WHX1SXA",
+        "entryReference": "202400300076BD27-WHX1SXA",
+        "bookingDate": "2024-04-30",
+        "valueDate": "2024-04-30",
+        "transactionAmount": {
+          "amount": "20.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MME DUFAU ABELL",
+          "NOT PROVIDED",
+          "NOTPROVIDED"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "b545f2f594ff92a8587ecaef3b1b1a09"
+      },
+      {
+        "transactionId": "202400300078BD27-0009814",
+        "entryReference": "202400300078BD27-0009814",
+        "bookingDate": "2024-04-30",
+        "valueDate": "2024-04-29",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024042900009814000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "e281b513f0ee8c0dbe30d43e1798cab4"
+      },
+      {
+        "transactionId": "202400300075BD27-WHWYQ0U",
+        "entryReference": "202400300075BD27-WHWYQ0U",
+        "bookingDate": "2024-04-29",
+        "valueDate": "2024-04-29",
+        "transactionAmount": {
+          "amount": "-5.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "74fad503b812d543a3c5e79baf563e0a"
+      },
+      {
+        "transactionId": "202400300074BD27-5J4GUZS",
+        "entryReference": "202400300074BD27-5J4GUZS",
+        "bookingDate": "2024-04-29",
+        "valueDate": "2024-04-29",
+        "transactionAmount": {
+          "amount": "-10.91",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "260424 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "d0d210e2ed62d96809101c600d4a2a42"
+      },
+      {
+        "transactionId": "202400300073BD27-5J4GUZR",
+        "entryReference": "202400300073BD27-5J4GUZR",
+        "bookingDate": "2024-04-29",
+        "valueDate": "2024-04-29",
+        "transactionAmount": {
+          "amount": "-7.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "260424 CB****8172",
+          "RESTO LA MAISON66SAINT ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "ccf0d6e726297088f84b7ec0d5827f5f"
+      },
+      {
+        "transactionId": "202400300072BD27-5E84J0O",
+        "entryReference": "202400300072BD27-5E84J0O",
+        "bookingDate": "2024-04-29",
+        "valueDate": "2024-04-29",
+        "transactionAmount": {
+          "amount": "30.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "EURO VIR EUROPEENNE DE C"
+        ],
+        "bankTransactionCode": "PMNT-RCDT-ESCT",
+        "internalTransactionId": "81ab482ece7be18761bbad401f922f9a"
+      },
+      {
+        "transactionId": "202400300077BD27-0003588",
+        "entryReference": "202400300077BD27-0003588",
+        "bookingDate": "2024-04-30",
+        "valueDate": "2024-04-28",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024042800003588000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "23046104ba043096d4c86549254222eb"
+      },
+      {
+        "transactionId": "202400300071BD27-WHWSRP3",
+        "entryReference": "202400300071BD27-WHWSRP3",
+        "bookingDate": "2024-04-28",
+        "valueDate": "2024-04-28",
+        "transactionAmount": {
+          "amount": "-2.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "b2421e3b55928144b362621871f814ed"
+      },
+      {
+        "transactionId": "202400300070BD27-0008103",
+        "entryReference": "202400300070BD27-0008103",
+        "bookingDate": "2024-04-27",
+        "valueDate": "2024-04-26",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024042600008103000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "747856d229694ed949b5aa144f9f12ab"
+      },
+      {
+        "transactionId": "202400300069BD27-WHWRGFR",
+        "entryReference": "202400300069BD27-WHWRGFR",
+        "bookingDate": "2024-04-26",
+        "valueDate": "2024-04-26",
+        "transactionAmount": {
+          "amount": "-10.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "ec79059c1c468e6668979a1fcefb403a"
+      },
+      {
+        "transactionId": "202400300068BD27-WHWRGFN",
+        "entryReference": "202400300068BD27-WHWRGFN",
+        "bookingDate": "2024-04-26",
+        "valueDate": "2024-04-26",
+        "transactionAmount": {
+          "amount": "10.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "04bcf5240b002b820db5a1c6164ebf2f"
+      },
+      {
+        "transactionId": "202400300066BD27-WHWMB8P",
+        "entryReference": "202400300066BD27-WHWMB8P",
+        "bookingDate": "2024-04-26",
+        "valueDate": "2024-04-26",
+        "transactionAmount": {
+          "amount": "10.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE  MELODIE D",
+          "Virement de MLLE MELODIE DEICHFI",
+          "Virement de MLLE MELODIE DEICHFI"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "128b2ba3dcde734ea922d44ddb654dee"
+      },
+      {
+        "transactionId": "202400300067BD27-5ENN101",
+        "entryReference": "202400300067BD27-5ENN101",
+        "bookingDate": "2024-04-26",
+        "valueDate": "2024-04-26",
+        "transactionAmount": {
+          "amount": "-70.99",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "260424 CB****8172",
+          "HELLOFRESH     NL Amsterdam",
+          "70,99EUR 1 EURO = 1,000000"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "2016d1047df61f705afac3de7739fc4a"
+      },
+      {
+        "transactionId": "202400300065BD27-5E5PWG3",
+        "entryReference": "202400300065BD27-5E5PWG3",
+        "bookingDate": "2024-04-26",
+        "valueDate": "2024-04-26",
+        "transactionAmount": {
+          "amount": "-139.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "250424 CB****8172",
+          "CLINIQUE VETERI66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "b05c4935fecf74aedaf072583cf10e68"
+      },
+      {
+        "transactionId": "202400300064BD27-0007241",
+        "entryReference": "202400300064BD27-0007241",
+        "bookingDate": "2024-04-26",
+        "valueDate": "2024-04-25",
+        "transactionAmount": {
+          "amount": "-1.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS SUR VIR INSTANTANE",
+          "XCMDZ010 2024042500007241000001"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "03c70a057c17fb758a3b286ba9015d13"
+      },
+      {
+        "transactionId": "202400300063BD27-WHWIB9H",
+        "entryReference": "202400300063BD27-WHWIB9H",
+        "bookingDate": "2024-04-25",
+        "valueDate": "2024-04-25",
+        "transactionAmount": {
+          "amount": "-21.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MLLE MELODIE DE",
+          "Virement de Compte perso",
+          "Virement de Compte perso"
+        ],
+        "bankTransactionCode": "PMNT-IRCT-ESCT",
+        "internalTransactionId": "752f2fd0b3a6475ccadd82407fcdd4d9"
+      },
+      {
+        "transactionId": "202400300062BD27-5CI6JZS",
+        "entryReference": "202400300062BD27-5CI6JZS",
+        "bookingDate": "2024-04-25",
+        "valueDate": "2024-04-25",
+        "transactionAmount": {
+          "amount": "-4.19",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "240424 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "77ac2a76a529a2ea3933431f933ba2f6"
+      },
+      {
+        "transactionId": "202400300061BD27-5AUN650",
+        "entryReference": "202400300061BD27-5AUN650",
+        "bookingDate": "2024-04-24",
+        "valueDate": "2024-04-24",
+        "transactionAmount": {
+          "amount": "-37.29",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "230424 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "8c1948a7b28ec16f9b89035059cc08af"
+      },
+      {
+        "transactionId": "202400300060BD27-5AUN64Z",
+        "entryReference": "202400300060BD27-5AUN64Z",
+        "bookingDate": "2024-04-24",
+        "valueDate": "2024-04-24",
+        "transactionAmount": {
+          "amount": "-30.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "230424 CB****8172",
+          "CLINIQUE VETERI66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "bea6fab95d4b81c6cb73b07aee6ade14"
+      },
+      {
+        "transactionId": "202400300059BD27-5AUN64Y",
+        "entryReference": "202400300059BD27-5AUN64Y",
+        "bookingDate": "2024-04-24",
+        "valueDate": "2024-04-24",
+        "transactionAmount": {
+          "amount": "-2.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "230424 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "0a8f69846f57469b6ec4be05060eb504"
+      },
+      {
+        "transactionId": "202400300058BD27-WHW5AQX",
+        "entryReference": "202400300058BD27-WHW5AQX",
+        "bookingDate": "2024-04-23",
+        "valueDate": "2024-04-23",
+        "transactionAmount": {
+          "amount": "250.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "9b82f995453a4c621495f075b8ff3bf1"
+      },
+      {
+        "transactionId": "202400300057BD27-5973TC6",
+        "entryReference": "202400300057BD27-5973TC6",
+        "bookingDate": "2024-04-23",
+        "valueDate": "2024-04-23",
+        "transactionAmount": {
+          "amount": "-29.68",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "220424 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "4ec502797c4b65325601e33e7ca4a3f4"
+      },
+      {
+        "transactionId": "202400300056BD27-0009376",
+        "entryReference": "202400300056BD27-0009376",
+        "bookingDate": "2024-04-23",
+        "valueDate": "2024-04-22",
+        "transactionAmount": {
+          "amount": "-3.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "COTIS CRISTAL ESSENTIEL",
+          "XCCNV063 2024042200009376000001",
+          "CONTRAT CNV0000930335"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "a32b716e41fe1baa1c058cf73c65ffd3"
+      },
+      {
+        "transactionId": "202400300054BD27-WHW1NWK",
+        "entryReference": "202400300054BD27-WHW1NWK",
+        "bookingDate": "2024-04-22",
+        "valueDate": "2024-04-22",
+        "transactionAmount": {
+          "amount": "50.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST MME DUFAU ABELL",
+          "NOT PROVIDED",
+          "NOTPROVIDED"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "4ae457097f0c37202542d05185291f35"
+      },
+      {
+        "transactionId": "202400300053BD27-WHW1EFA",
+        "entryReference": "202400300053BD27-WHW1EFA",
+        "bookingDate": "2024-04-22",
+        "valueDate": "2024-04-22",
+        "transactionAmount": {
+          "amount": "50.00",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "VIR INST M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN",
+          "VIREMENT DE M LAMBERT DYLAN"
+        ],
+        "bankTransactionCode": "PMNT-RRCT-ESCT",
+        "internalTransactionId": "783691a17446f723d02da154999a3f9e"
+      },
+      {
+        "transactionId": "202400300052BD27-57JM3X9",
+        "entryReference": "202400300052BD27-57JM3X9",
+        "bookingDate": "2024-04-22",
+        "valueDate": "2024-04-22",
+        "transactionAmount": {
+          "amount": "-4.20",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "210424 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "1d7f472d4cb91fcffeaa3a082e8f2fb5"
+      },
+      {
+        "transactionId": "202400300055BD27-0004234",
+        "entryReference": "202400300055BD27-0004234",
+        "bookingDate": "2024-04-23",
+        "valueDate": "2024-04-20",
+        "transactionAmount": {
+          "amount": "-0.75",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "FRAIS PAI CB DI HORS EEE",
+          "XCPCB200 2024042000004234000001",
+          "COMMISSION CB   190424 GITHUB, I"
+        ],
+        "bankTransactionCode": "ACMT-MDOP-COMM",
+        "internalTransactionId": "40d4353b3710373874197a2410ce822c"
+      },
+      {
+        "transactionId": "202400300051BD27-54QF88Y",
+        "entryReference": "202400300051BD27-54QF88Y",
+        "bookingDate": "2024-04-20",
+        "valueDate": "2024-04-20",
+        "transactionAmount": {
+          "amount": "-9.40",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "190424 CB****8172",
+          "GITHUB, INC.   US HTTPSGITHUB.",
+          "10,00USD 1 EURO = 1,063829"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "834f28ee9a23c8c7f2ca9f471f0aea4f"
+      },
+      {
+        "transactionId": "202400300050BD27-548I5IP",
+        "entryReference": "202400300050BD27-548I5IP",
+        "bookingDate": "2024-04-20",
+        "valueDate": "2024-04-20",
+        "transactionAmount": {
+          "amount": "-2.60",
+          "currency": "EUR"
+        },
+        "remittanceInformationUnstructuredArray": [
+          "190424 CB****8172",
+          "SITIS          66ST ESTEVE"
+        ],
+        "bankTransactionCode": "PMNT-CCRD-POSD",
+        "internalTransactionId": "ad14edcf06f58305ee66a5eaeb14b64e"
+      }
+    ],
+    "pending": []
+  }
+}
