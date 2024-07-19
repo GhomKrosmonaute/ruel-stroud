@@ -1,7 +1,8 @@
 import { Table } from "#database"
 
 export interface Transaction {
-  id: number
+  id: string
+  actorId: number
   amount: number
   date: Date
   data: string
@@ -10,9 +11,14 @@ export interface Transaction {
 export default new Table<Transaction>({
   name: "transaction",
   setup: (table) => {
-    table.increments("id").primary()
+    table.string("id").unique().primary().notNullable()
     table.float("amount").notNullable()
     table.dateTime("date").notNullable()
-    table.string("data").notNullable()
+    table
+      .integer("actorId")
+      .references("id")
+      .inTable("actor")
+      .onDelete("CASCADE")
+      .notNullable()
   },
 })

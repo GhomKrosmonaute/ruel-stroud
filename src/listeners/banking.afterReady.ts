@@ -1,5 +1,4 @@
 import * as app from "#app"
-import fs from "fs/promises"
 
 import bankingTable from "#tables/banking.ts"
 import chalk from "chalk"
@@ -49,6 +48,10 @@ const listener: app.Listener<"afterReady"> = {
           process.exit(1)
         }
       }
+    } else {
+      await app.bankingNeedsToBeReconnected()
+
+      app.launchBankingCron()
     }
   },
 }

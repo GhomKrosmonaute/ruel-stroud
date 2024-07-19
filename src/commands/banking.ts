@@ -123,15 +123,7 @@ export default new app.Command({
                         transaction.bookingDateTime || transaction.valueDateTime
                           ? "f"
                           : "D"
-                      }> ${
-                        transaction.remittanceInformationUnstructuredArray
-                          ? app.getBestRemittanceInformation(
-                              transaction.remittanceInformationUnstructuredArray,
-                            )
-                          : transaction.remittanceInformationStructured ??
-                            transaction.remittanceInformationUnstructured ??
-                            "unknown"
-                      }`,
+                      }> ${app.formatActorName(transaction)}`,
                   )
                   .join("\n"),
                 footer: { text: `Page: ${index + 1} / ${pages.length}` },

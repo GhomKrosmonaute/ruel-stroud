@@ -9,6 +9,7 @@ export const config = new Config({
     BANKING_SECRET_ID: z.string(),
     BANKING_SECRET_KEY: z.string(),
     BANKING_ACCOUNT_ID: z.string(),
+    BANKING_REDIRECT_PORT: z.coerce.number(),
     BANKING_INSTITUTION_ID: z.string(),
     BANKING_AUTHORIZED_OVERDRAFT: z.coerce.number().positive(),
   }),

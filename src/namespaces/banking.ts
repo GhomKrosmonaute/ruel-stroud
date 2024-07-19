@@ -2,6 +2,7 @@
 
 import chalk from "chalk"
 import cron from "node-cron"
+import http from "http"
 import querystring from "node:querystring"
 
 import env from "#env"
@@ -10,10 +11,12 @@ import { Logger } from "#logger"
 
 import bankingTable, { Banking } from "#tables/banking.ts"
 import transactionTable from "#tables/transaction.ts"
+import actorTable from "#tables/actor.ts"
 import type { Middleware } from "#src/app/command.ts"
 import { dayjs, getSystemMessage } from "#src/app/util.ts"
 
 import * as types from "./banking.types.ts"
+import discord from "discord.js"
 
 const currencies: Record<string, string> = {
   EUR: "€",
@@ -74,6 +77,16 @@ export function formatPrice(
   return `\`${price}\``
 }
 
+export function formatActorName(transaction: types.Transaction) {
+  return transaction.remittanceInformationUnstructuredArray
+    ? getBestRemittanceInformation(
+        transaction.remittanceInformationUnstructuredArray,
+      )
+    : transaction.remittanceInformationStructured ??
+        transaction.remittanceInformationUnstructured ??
+        "unknown"
+}
+
 function errorHandler(action: string) {
   return (response: Response) => {
     if (!response.ok) {
@@ -95,8 +108,10 @@ export async function bankingNeedsToBeReconnected() {
 
   const channel = client.channels.cache.get(env.BOT_CHANNEL)
 
+  let message: discord.Message | undefined
+
   if (channel?.isTextBased()) {
-    channel.send(
+    message = await channel.send(
       await getSystemMessage("error", {
         content: `<@${env.BOT_OWNER}>`,
         title: "Banking reconnection needed",
@@ -104,13 +119,31 @@ export async function bankingNeedsToBeReconnected() {
         url: link,
       }),
     )
-  } else {
-    bankingLogger.error(
-      `${chalk.blueBright("bankingNeedsToBeReconnected")} no channel found to send reconnection message`,
-    )
-
-    throw 1
   }
+
+  // launch a server endpoint to receive the connection confirmation
+
+  const endpoint = http.createServer()
+
+  return new Promise((resolve) => {
+    endpoint.on("request", (request, response) => {
+      response.writeHead(200)
+      response.end("Connection confirmed")
+      resolve(null)
+    })
+    endpoint.listen(env.BANKING_REDIRECT_PORT)
+  }).then(async () => {
+    endpoint.close()
+
+    bankingLogger.success("successfully reconnected")
+
+    message?.edit(
+      await getSystemMessage("success", {
+        title: "Banking reconnection",
+        description: "Successfully reconnected",
+      }),
+    )
+  })
 }
 
 export function launchBankingCron() {
@@ -133,28 +166,30 @@ export function launchBankingCron() {
 export async function recordTransactions(options?: FetchTransactionsOptions) {
   const { transactions } = await fetchTransactions(options)
 
-  const toInsert: types.Transaction[] = []
-
-  for (const transaction of transactions.booked) {
-    const exists = await transactionTable.query
-      .where({
-        data: JSON.stringify(transaction),
-        date: resolveDate(transaction),
-      })
-      .first()
-
-    if (!exists) {
-      toInsert.push(transaction)
-    }
-  }
-
-  await transactionTable.query.insert(
-    toInsert.map((transaction) => ({
-      amount: +transaction.transactionAmount.amount,
-      date: resolveDate(transaction),
-      data: JSON.stringify(transaction),
-    })),
+  const actorNames = transactions.booked.map((transaction) =>
+    formatActorName(transaction),
   )
+
+  await actorTable.query
+    .insert(actorNames.map((name) => ({ name })))
+    .onConflict("name")
+    .ignore()
+
+  const actors = await actorTable.query.whereIn("name", actorNames)
+
+  await transactionTable.query
+    .insert(
+      transactions.booked.map((transaction) => ({
+        actorId: actors.find(
+          (actor) => actor.name === formatActorName(transaction),
+        )!.id,
+        date: resolveDate(transaction),
+        amount: +transaction.transactionAmount.amount,
+        id: resolveId(transaction),
+      })),
+    )
+    .onConflict("id")
+    .ignore()
 }
 
 export function resolveDate(transaction: types.Transaction) {
@@ -164,6 +199,18 @@ export function resolveDate(transaction: types.Transaction) {
       transaction.bookingDate ??
       transaction.valueDate,
   ).toDate()
+}
+
+export function resolveId(transaction: types.Transaction) {
+  return (
+    transaction.transactionId ??
+    transaction.internalTransactionId ??
+    JSON.stringify({
+      actor: formatActorName(transaction),
+      date: resolveDate(transaction),
+      amount: +transaction.transactionAmount.amount,
+    })
+  )
 }
 
 export function getBestRemittanceInformation(info: string[]) {
@@ -339,8 +386,7 @@ async function createBankingRequisition(): Promise<{
       Authorization: `Bearer ${bankingCache.ACCESS}`,
     },
     body: JSON.stringify({
-      redirect:
-        "https://discord.com/developers/applications/1257663003650686986/information",
+      redirect: `http://localhost:${env.BANKING_REDIRECT_PORT}`,
       institution_id: env.BANKING_INSTITUTION_ID,
       agreement: bankingCache.AGREEMENT_ID,
       user_language: "FR",
