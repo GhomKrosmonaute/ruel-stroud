@@ -128,7 +128,7 @@ export async function bankingNeedsToBeReconnected() {
   return new Promise((resolve) => {
     endpoint.on("request", (request, response) => {
       response.writeHead(200)
-      response.end("Connection confirmed")
+      response.end("Connection confirmed, you can close this tab.")
       resolve(null)
     })
     endpoint.listen(env.BANKING_REDIRECT_PORT)
