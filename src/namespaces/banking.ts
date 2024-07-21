@@ -12,6 +12,8 @@ import { Logger } from "#logger"
 import bankingTable, { Banking } from "#tables/banking.ts"
 import transactionTable from "#tables/transaction.ts"
 import actorTable from "#tables/actor.ts"
+import subscriptionTable from "#tables/subscription.ts"
+
 import type { Middleware } from "#src/app/command.ts"
 import { dayjs, getSystemMessage } from "#src/app/util.ts"
 
@@ -190,7 +192,17 @@ export async function recordTransactions(options?: FetchTransactionsOptions) {
     )
     .onConflict("id")
     .ignore()
+
+  await recordSubscriptionDoubts(transactions.booked)
 }
+
+/**
+ * Records transactions that appear to be monthly weekly or daily
+ * @param transactions
+ */
+export async function recordSubscriptionDoubts(
+  transactions: types.Transaction[],
+) {}
 
 export function resolveDate(transaction: types.Transaction) {
   return dayjs(

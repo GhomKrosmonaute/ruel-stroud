@@ -4,6 +4,7 @@ export interface Subscription {
   interval: `${number} ${"year" | "month" | "week" | "day"}`
   lastPaymentDate: Date
   actorId: number
+  doubts: boolean
 }
 
 export default new Table<Subscription>({
@@ -17,5 +18,6 @@ export default new Table<Subscription>({
       .inTable("actor")
       .onDelete("CASCADE")
       .notNullable()
+    table.boolean("doubts").defaultTo(false)
   },
 })
